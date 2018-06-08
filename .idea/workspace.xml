@@ -4,9 +4,7 @@
     <list default="true" id="68a87f77-d643-4976-8a31-a1d629f2f1c9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flyway/views.py" afterPath="$PROJECT_DIR$/flyway/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base/base.html" afterPath="$PROJECT_DIR$/templates/base/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/flyway/env_change.html" afterPath="$PROJECT_DIR$/templates/flyway/env_change.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/flyway/schema_add.html" afterPath="$PROJECT_DIR$/templates/flyway/schema_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/flyway/instance_add.html" afterPath="$PROJECT_DIR$/templates/flyway/instance_add.html" />
     </list>
     <ignored path="mysql_platform.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,37 +38,37 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flyway/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+            <state relative-caret-position="400">
+              <caret line="244" column="20" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
-                <marker date="1528445155434" expanded="true" signature="1185:1316" ph="SELECT 1 fro... yhops_flyway_db_detail" />
-                <marker date="1528445155434" expanded="true" signature="1373:1529" ph="SELECT 1 fro... yhops_flyway_sharding" />
-                <marker date="1528445155434" expanded="true" signature="2745:2815" ph="SELECT DISTI... yhops_flyway_env" />
-                <marker date="1528445155434" expanded="true" signature="2842:2931" ph="SELECT DISTI... yhops_flyway_env" />
-                <marker date="1528445155434" expanded="true" signature="3282:3410" ph="SELECT env_n... yhops_flyway_env" />
-                <marker date="1528445155434" expanded="true" signature="3458:3625" ph="SELECT remas... yhops_flyway_sharding_env" />
-                <marker date="1528445155434" expanded="true" signature="3834:3896" ph="SELECT proje... yhops_project" />
-                <marker date="1528445155434" expanded="true" signature="4126:4177" ph="SELECT id fr... yhops_project" />
-                <marker date="1528445155434" expanded="true" signature="4407:4459" ph="select id fr... yhops_flyway_env" />
-                <marker date="1528445155434" expanded="true" signature="4591:4732" ph="insert into yhops_flyway_db_detail... " />
-                <marker date="1528445155434" expanded="true" signature="5196:5268" ph="SELECT * fro... yhops_flyway_sharding_env" />
-                <marker date="1528445155434" expanded="true" signature="5607:5714" ph="insert into yhops_flyway_sharding... " />
-                <marker date="1528445155434" expanded="true" signature="5747:5874" ph="insert into yhops_flyway_sharding... " />
-                <marker date="1528445155434" expanded="true" signature="8390:8592" ph="SELECT b.env... yhops_flyway_db_detail" />
-                <marker date="1528445155434" expanded="true" signature="9174:9460" ph="SELECT b.rem... yhops_flyway_sharding" />
-                <marker date="1528445155434" expanded="true" signature="10120:10225" ph="SELECT 1 fro... yhops_flyway_db_detail" />
-                <marker date="1528445155434" expanded="true" signature="10619:10733" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
-                <marker date="1528445155434" expanded="true" signature="10806:10924" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
-                <marker date="1528445155434" expanded="true" signature="11378:11533" ph="INSERT into yhops_flyway_env... " />
-                <marker date="1528445155434" expanded="true" signature="12234:12349" ph="INSERT into yhops_flyway_sharding_env... " />
-                <marker date="1528445155434" expanded="true" signature="12234:12409" ph="INSERT into yhops_flyway_sharding_env... " />
-                <marker date="1528445155434" expanded="true" signature="12781:12956" ph="INSERT into yhops_flyway_sharding_env... " />
-                <marker date="1528445155434" expanded="true" signature="15557:15892" ph="SELECT * fro... env_name" />
-                <marker date="1528445155434" expanded="true" signature="15572:15857" ph="SELECT env_n... yhops_flyway_sharding_env" />
-                <marker date="1528445155434" expanded="true" signature="16157:16233" ph="SELECT DISTI... yhops_flyway_env" />
-                <marker date="1528445155434" expanded="true" signature="16922:17061" ph="update yhops... " />
-                <marker date="1528445155434" expanded="true" signature="17587:17638" ph="delete from " />
+                <marker date="1528446766034" expanded="true" signature="1185:1316" ph="SELECT 1 fro... yhops_flyway_db_detail" />
+                <marker date="1528446766034" expanded="true" signature="1373:1529" ph="SELECT 1 fro... yhops_flyway_sharding" />
+                <marker date="1528446766034" expanded="true" signature="2745:2815" ph="SELECT DISTI... yhops_flyway_env" />
+                <marker date="1528446766034" expanded="true" signature="2842:2931" ph="SELECT DISTI... yhops_flyway_env" />
+                <marker date="1528446766034" expanded="true" signature="3282:3410" ph="SELECT env_n... yhops_flyway_env" />
+                <marker date="1528446766034" expanded="true" signature="3458:3625" ph="SELECT remas... yhops_flyway_sharding_env" />
+                <marker date="1528446766034" expanded="true" signature="3834:3896" ph="SELECT proje... yhops_project" />
+                <marker date="1528446766034" expanded="true" signature="4126:4177" ph="SELECT id fr... yhops_project" />
+                <marker date="1528446766034" expanded="true" signature="4407:4459" ph="select id fr... yhops_flyway_env" />
+                <marker date="1528446766034" expanded="true" signature="4591:4732" ph="insert into yhops_flyway_db_detail... " />
+                <marker date="1528446766034" expanded="true" signature="5196:5268" ph="SELECT * fro... yhops_flyway_sharding_env" />
+                <marker date="1528446766034" expanded="true" signature="5607:5714" ph="insert into yhops_flyway_sharding... " />
+                <marker date="1528446766034" expanded="true" signature="5747:5874" ph="insert into yhops_flyway_sharding... " />
+                <marker date="1528446766034" expanded="true" signature="8390:8592" ph="SELECT b.env... yhops_flyway_db_detail" />
+                <marker date="1528446766034" expanded="true" signature="9174:9519" ph="SELECT b.rem... yhops_flyway_sharding" />
+                <marker date="1528446766034" expanded="true" signature="10179:10284" ph="SELECT 1 fro... yhops_flyway_db_detail" />
+                <marker date="1528446766034" expanded="true" signature="10678:10792" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
+                <marker date="1528446766034" expanded="true" signature="10865:10983" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
+                <marker date="1528446766034" expanded="true" signature="11437:11592" ph="INSERT into yhops_flyway_env... " />
+                <marker date="1528446766034" expanded="true" signature="12293:12408" ph="INSERT into yhops_flyway_sharding_env... " />
+                <marker date="1528446766034" expanded="true" signature="12293:12468" ph="INSERT into yhops_flyway_sharding_env... " />
+                <marker date="1528446766034" expanded="true" signature="12840:13015" ph="INSERT into yhops_flyway_sharding_env... " />
+                <marker date="1528446766034" expanded="true" signature="15616:15951" ph="SELECT * fro... env_name" />
+                <marker date="1528446766034" expanded="true" signature="15631:15916" ph="SELECT env_n... yhops_flyway_sharding_env" />
+                <marker date="1528446766034" expanded="true" signature="16216:16292" ph="SELECT DISTI... yhops_flyway_env" />
+                <marker date="1528446766034" expanded="true" signature="16981:17120" ph="update yhops... " />
+                <marker date="1528446766034" expanded="true" signature="17646:17697" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -549,7 +547,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1408" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.103515625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -952,37 +950,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flyway/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+        <state relative-caret-position="400">
+          <caret line="244" column="20" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
-            <marker date="1528445155434" expanded="true" signature="1185:1316" ph="SELECT 1 fro... yhops_flyway_db_detail" />
-            <marker date="1528445155434" expanded="true" signature="1373:1529" ph="SELECT 1 fro... yhops_flyway_sharding" />
-            <marker date="1528445155434" expanded="true" signature="2745:2815" ph="SELECT DISTI... yhops_flyway_env" />
-            <marker date="1528445155434" expanded="true" signature="2842:2931" ph="SELECT DISTI... yhops_flyway_env" />
-            <marker date="1528445155434" expanded="true" signature="3282:3410" ph="SELECT env_n... yhops_flyway_env" />
-            <marker date="1528445155434" expanded="true" signature="3458:3625" ph="SELECT remas... yhops_flyway_sharding_env" />
-            <marker date="1528445155434" expanded="true" signature="3834:3896" ph="SELECT proje... yhops_project" />
-            <marker date="1528445155434" expanded="true" signature="4126:4177" ph="SELECT id fr... yhops_project" />
-            <marker date="1528445155434" expanded="true" signature="4407:4459" ph="select id fr... yhops_flyway_env" />
-            <marker date="1528445155434" expanded="true" signature="4591:4732" ph="insert into yhops_flyway_db_detail... " />
-            <marker date="1528445155434" expanded="true" signature="5196:5268" ph="SELECT * fro... yhops_flyway_sharding_env" />
-            <marker date="1528445155434" expanded="true" signature="5607:5714" ph="insert into yhops_flyway_sharding... " />
-            <marker date="1528445155434" expanded="true" signature="5747:5874" ph="insert into yhops_flyway_sharding... " />
-            <marker date="1528445155434" expanded="true" signature="8390:8592" ph="SELECT b.env... yhops_flyway_db_detail" />
-            <marker date="1528445155434" expanded="true" signature="9174:9460" ph="SELECT b.rem... yhops_flyway_sharding" />
-            <marker date="1528445155434" expanded="true" signature="10120:10225" ph="SELECT 1 fro... yhops_flyway_db_detail" />
-            <marker date="1528445155434" expanded="true" signature="10619:10733" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
-            <marker date="1528445155434" expanded="true" signature="10806:10924" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
-            <marker date="1528445155434" expanded="true" signature="11378:11533" ph="INSERT into yhops_flyway_env... " />
-            <marker date="1528445155434" expanded="true" signature="12234:12349" ph="INSERT into yhops_flyway_sharding_env... " />
-            <marker date="1528445155434" expanded="true" signature="12234:12409" ph="INSERT into yhops_flyway_sharding_env... " />
-            <marker date="1528445155434" expanded="true" signature="12781:12956" ph="INSERT into yhops_flyway_sharding_env... " />
-            <marker date="1528445155434" expanded="true" signature="15557:15892" ph="SELECT * fro... env_name" />
-            <marker date="1528445155434" expanded="true" signature="15572:15857" ph="SELECT env_n... yhops_flyway_sharding_env" />
-            <marker date="1528445155434" expanded="true" signature="16157:16233" ph="SELECT DISTI... yhops_flyway_env" />
-            <marker date="1528445155434" expanded="true" signature="16922:17061" ph="update yhops... " />
-            <marker date="1528445155434" expanded="true" signature="17587:17638" ph="delete from " />
+            <marker date="1528446766034" expanded="true" signature="1185:1316" ph="SELECT 1 fro... yhops_flyway_db_detail" />
+            <marker date="1528446766034" expanded="true" signature="1373:1529" ph="SELECT 1 fro... yhops_flyway_sharding" />
+            <marker date="1528446766034" expanded="true" signature="2745:2815" ph="SELECT DISTI... yhops_flyway_env" />
+            <marker date="1528446766034" expanded="true" signature="2842:2931" ph="SELECT DISTI... yhops_flyway_env" />
+            <marker date="1528446766034" expanded="true" signature="3282:3410" ph="SELECT env_n... yhops_flyway_env" />
+            <marker date="1528446766034" expanded="true" signature="3458:3625" ph="SELECT remas... yhops_flyway_sharding_env" />
+            <marker date="1528446766034" expanded="true" signature="3834:3896" ph="SELECT proje... yhops_project" />
+            <marker date="1528446766034" expanded="true" signature="4126:4177" ph="SELECT id fr... yhops_project" />
+            <marker date="1528446766034" expanded="true" signature="4407:4459" ph="select id fr... yhops_flyway_env" />
+            <marker date="1528446766034" expanded="true" signature="4591:4732" ph="insert into yhops_flyway_db_detail... " />
+            <marker date="1528446766034" expanded="true" signature="5196:5268" ph="SELECT * fro... yhops_flyway_sharding_env" />
+            <marker date="1528446766034" expanded="true" signature="5607:5714" ph="insert into yhops_flyway_sharding... " />
+            <marker date="1528446766034" expanded="true" signature="5747:5874" ph="insert into yhops_flyway_sharding... " />
+            <marker date="1528446766034" expanded="true" signature="8390:8592" ph="SELECT b.env... yhops_flyway_db_detail" />
+            <marker date="1528446766034" expanded="true" signature="9174:9519" ph="SELECT b.rem... yhops_flyway_sharding" />
+            <marker date="1528446766034" expanded="true" signature="10179:10284" ph="SELECT 1 fro... yhops_flyway_db_detail" />
+            <marker date="1528446766034" expanded="true" signature="10678:10792" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
+            <marker date="1528446766034" expanded="true" signature="10865:10983" ph="SELECT 1 fro... yhops_flyway_sharding_env" />
+            <marker date="1528446766034" expanded="true" signature="11437:11592" ph="INSERT into yhops_flyway_env... " />
+            <marker date="1528446766034" expanded="true" signature="12293:12408" ph="INSERT into yhops_flyway_sharding_env... " />
+            <marker date="1528446766034" expanded="true" signature="12293:12468" ph="INSERT into yhops_flyway_sharding_env... " />
+            <marker date="1528446766034" expanded="true" signature="12840:13015" ph="INSERT into yhops_flyway_sharding_env... " />
+            <marker date="1528446766034" expanded="true" signature="15616:15951" ph="SELECT * fro... env_name" />
+            <marker date="1528446766034" expanded="true" signature="15631:15916" ph="SELECT env_n... yhops_flyway_sharding_env" />
+            <marker date="1528446766034" expanded="true" signature="16216:16292" ph="SELECT DISTI... yhops_flyway_env" />
+            <marker date="1528446766034" expanded="true" signature="16981:17120" ph="update yhops... " />
+            <marker date="1528446766034" expanded="true" signature="17646:17697" ph="delete from " />
           </folding>
         </state>
       </provider>

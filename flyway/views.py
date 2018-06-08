@@ -245,8 +245,9 @@ def shard_schema_list(request):
             page = 1
     except ValueError:
         page = 1
-    sql = """SELECT b.remask as env,c.project_name,GROUP_CONCAT(a.db_name order by a.id desc) as db_name,b.ip,b.`port`,b.branch,a.dir as sql_dir from yhops_flyway_sharding a,
-yhops_flyway_sharding_env b, yhops_project c where a.flyway_sharding_id=b.id and a.project_id=c.id group by remark,ip,`port` """
+    sql = """SELECT b.remask as env,c.project_name,GROUP_CONCAT(a.db_name order by a.id desc) as db_name,b.ip,b.`port`,
+          b.branch,a.dir as sql_dir from yhops_flyway_sharding a, yhops_flyway_sharding_env b, yhops_project c
+          where a.flyway_sharding_id=b.id and a.project_id=c.id and b.env_name!='online' group by remark,ip,`port` ORDER BY env """
     record_list = s.execute_and_return_dict(sql)
     p = Paginator(record_list, 10, request=request)
     try:
