@@ -172,14 +172,14 @@
                         </a>
                         <ul>
                             <li>
-                                <a href='#' class="{% if sub_module == "1_1" %}
+                                <a href='{% url 'statistics_topology' %}' class="{% if sub_module == "1_1" %}
                                     active
                                 {% endif %}">
                                     <span>数据库拓扑图</span>
                                 </a>
                             </li>
                             <li>
-                                <a href='#' class="{% if sub_module == "1_2" %}
+                                <a href='{% url 'statistics_instance_list' %}' class="{% if sub_module == "1_2" %}
                                     active
                                 {% endif %}">
                                     <span>Process List</span>
@@ -197,7 +197,7 @@
                         </a>
                         <ul>
                             <li>
-                                <a href='#' class="{% if sub_module == "2_1" %}
+                                <a href='{% url 'sql_review_step' %}' class="{% if sub_module == "2_1" %}
                                     active
                                 {% endif %}">
                                     <span>提交SQL</span>
@@ -258,7 +258,7 @@
                         </a>
                         <ul>
                             <li>
-                                <a href='#' class="{% if sub_module == "3_1" %}
+                                <a href='{% url 'statistics_instance_pri_list' %}' class="{% if sub_module == "3_1" %}
                                     active
                                 {% endif %}">
                                     <span>查看权限</span>
@@ -368,7 +368,7 @@
                                 <a href='{% url "schema_add" %}' class="{% if sub_module == "7_1" %}
                                     active
                                 {% endif %}">
-                                    <span>添加数据库对应关系</span>
+                                    <span>添加数据库信息</span>
                                 </a>
                             </li>
                             <li>
@@ -524,7 +524,7 @@
                 }
             }
         });
-    }, 300000);
+    }, 30000);
 {#    清除未读消息按钮#}
     $('.clear-all').on('click', function(){
         $.ajax({

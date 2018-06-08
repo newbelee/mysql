@@ -14,7 +14,7 @@ from django.core import serializers
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from mysql_platform.mysql_function import SQL
 
-s = SQL()
+s = SQL('192.168.175.130', 3306, 'sqltool', 'mysqltool','test_remote_sql')
 
 
 t_depandency_api = "http://dependency-t1.yonghuivip.com/api/database/customMigrate"
@@ -69,14 +69,10 @@ def get_sharding_db_list(db_name, db_kind):
 @login_required()
 def env_name_by_ajax_and_is_shard(request):
     is_shard = request.POST.get('is_shard', 0)
-    print (is_shard,"xxxxxxxxxxxxxxxxxxxxx")
-    if is_shard != "db_main":
-        sql = """SELECT DISTINCT remask as env_name  from yhops_flyway_sharding_env where env_name !='online'"""
-    elif is_shard == "db_main":
-        sql = """SELECT DISTINCT env_name from yhops_flyway_env where env_name not like '%online%'"""
+    if is_shard == "db_main":
+        sql = "SELECT DISTINCT env as eenv from yhops_flyway_env where env !='online'"
     else:
-        data = dict({})
-        return HttpResponse(json.dumps(data), content_type='application/json')
+        sql = "SELECT DISTINCT env_name as eenv from yhops_flyway_sharding_env where env_name !='online'"
     data = s.execute_and_return_dict(sql)
     return HttpResponse(json.dumps(data), content_type='application/json')
 
@@ -85,12 +81,14 @@ def env_name_by_ajax_and_is_shard(request):
 def host_by_ajax_and_env_name(request):
     is_shard = request.POST.get('is_shard', 0)
     env_name = request.POST.get('env_name', 0)
+    print (env_name, is_shard)
     if is_shard == "db_main":
-        sql = """SELECT id,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+        sql = """SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
             where env = '{0}'""".format(env_name)
     else:
-        sql = """SELECT remask as env_name,GROUP_CONCAT(ip,":",`port`) as instance_info from yhops_flyway_sharding_env
-                    where remask='{0}' GROUP BY remask""".format(env_name)
+        sql = """SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='{0}' GROUP BY remask""".format(env_name)
+    print (sql)
     data = s.execute_and_return_dict(sql)
     return HttpResponse(json.dumps(data), content_type='application/json')
 
@@ -179,8 +177,8 @@ def flyway_submit_step(request):
     is_shard = request.POST.get('is_shard', "")
     env_name = request.POST.get('env_name', "")
     sql_dir = request.POST.get('sql_dir', "")
+    print (request, db_name, env_name, is_shard)
     is_exsist = check_db_if_exsits(request, db_name, env_name, is_shard)
-    print ("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
     if is_exsist:
         data = {
             'status': 'error',
@@ -194,14 +192,14 @@ def flyway_submit_step(request):
             'result_content': '非分库sql文件存放在shard-sql目录,Kidding？？？'
         }
         return HttpResponse(json.dumps(data), content_type='application/json')
-    if db_name and is_shard and env_name:
+    if not (db_name == 'none' or is_shard == 'none' or env_name =='none'):
         if is_shard == 'db_main':
            data = non_shard_submit_step(request, db_name, env_name)
         else:
             data = sharding_submit_step(request, db_name, env_name, is_shard, sql_dir)
     else:
         data = {
-            'status': 'ok',
+            'status': 'error',
             'result_content': '填写内容校验失败，请检查。'
         }
         return HttpResponse(json.dumps(data), content_type='application/json')
@@ -225,7 +223,8 @@ def main_schema_list(request):
     except ValueError:
         page = 1
     sql = """SELECT a.id,b.env,b.env_name,a.project_name,a.db_name,b.ip,b.`port`,b.branch
-        from yhops_flyway_db_detail a, yhops_flyway_env b where a.db_id =b.id ORDER by b.env"""
+          from yhops_flyway_db_detail a, yhops_flyway_env b
+          where a.db_id =b.id and b.env !='online' ORDER by b.env"""
     record_list = s.execute_and_return_dict(sql)
     p = Paginator(record_list, 10, request=request)
     try:
@@ -434,7 +433,8 @@ def deal_change_env_submit(request):
         }
         return HttpResponse(json.dumps(data), content_type='application/json')
 
-    sql = """update yhops_flyway_db_detail set db_id='{0}' where id = '{1}'""".format(instance_id, record_id)
+    sql = """update yhops_flyway_db_detail set db_id = (select id from yhops_flyway_env where env_name = '{0}' limit 1)
+                where id = '{1}'""".format(instance_id, record_id)
     status = s.execute_and_return_status(sql)
     if status == 'ok':
         data = {

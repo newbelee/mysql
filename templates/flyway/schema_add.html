@@ -91,7 +91,7 @@
                 $.ajax({
                     cache: false,
                     type: "POST",
-                    url: "{% url 'flyway_submit_step' %}",
+                    url: "{% url 'env_name_by_ajax_and_is_shard' %}",
                     data: {
                         'is_shard': is_shard
                     },
@@ -102,42 +102,42 @@
                     },
                     success: function (data) {
                         for (var i = 0; i < data.length; i++) {
-                            var tmp_node = "<option value='" + data[i].env_name + "'>" + data[i].instance_info + "</option>";
+                            var tmp_node = "<option value='" + data[i].eenv + "'>" + data[i].eenv + "</option>";
+                            env_name.append($(tmp_node))
+                        }
+                    }
+                })
+            });
+            $('#select_env').on('change', function () {
+                // debugger;
+                var group = $(this);
+                var csrf = $('[name="csrfmiddlewaretoken"]').val();
+                var instance = $('#select_instance');
+                instance.empty();
+                instance.append($('<option value="none">-----请选择对应实例------</option>'));
+                $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "{% url 'host_by_ajax_and_env_name' %}",
+                    data: {
+                        'is_shard': is_shard,
+                        'env_name': group.val()
+                    },
+                    async: true,
+                    dataType: 'json',
+                    beforeSend: function (xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf);
+                    },
+                    success: function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            var tmp_node = "<option value='" + data[i].eenv + "'>" + data[i].instance_info + "</option>";
                             instance.append($(tmp_node))
                         }
                     }
                 })
             });
-            // $('#select_env').on('change', function () {
-            //     // debugger;
-            //     var group = $(this);
-            //     var csrf = $('[name="csrfmiddlewaretoken"]').val();
-            //     var instance = $('#select_instance');
-            //     instance.empty();
-            //     instance.append($('<option value="none">-----请选择对应实例------</option>'));
-            //     $.ajax({
-            //         cache: false,
-            //         type: "POST",
-            //         url: "{% url 'host_by_ajax_and_env_name' %}",
-            //         data: {
-            //             'is_shard': is_shard,
-            //             'env_name': group.val()
-            //         },
-            //         async: true,
-            //         dataType: 'json',
-            //         beforeSend: function (xhr, settings) {
-            //             xhr.setRequestHeader("X-CSRFToken", csrf);
-            //         },
-            //         success: function (data) {
-            //             for (var i = 0; i < data.length; i++) {
-            //                 var tmp_node = "<option value='" + data[i].env_name + "'>" + data[i].instance_info + "</option>";
-            //                 instance.append($(tmp_node))
-            //             }
-            //         }
-            //     })
-            // });
             $('#submit').on('click', function(){
-                var env_name = $('#select_env').val();
+                var env_name = $('#select_instance').val();
                 var db_name = $('#schema_name').val();
                 var sql_dir = $('#sql_dir').val();
                 var csrf = $('[name="csrfmiddlewaretoken"]').val();
