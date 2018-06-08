@@ -1,0 +1,89 @@
+2018-04-20 16:11:18 WARNING 25 16828 / ali 错误账号密码登陆尝试
+2018-04-20 16:14:06 INFO 23 16909 / None 登陆成功
+2018-05-02 15:27:17 INFO 23 31711 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:27:30 INFO 23 31711 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:27:49 INFO 23 31711 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:29:20 INFO 23 31711 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:29:58 INFO 23 31711 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:38:57 INFO 23 31873 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:41:18 INFO 23 31873 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:45:20 INFO 23 31873 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 15:58:40 INFO 23 32487 /statistics/privileges_list/ None 读取权限列表，执行SQL: SELECT user, host, Select_priv, Insert_priv, Update_priv, Delete_priv FROM mysql.user
+2018-05-02 17:05:42 INFO 23 436 / aaa 登陆成功
+2018-05-02 17:06:13 WARNING 25 436 / ali 错误账号密码登陆尝试
+2018-05-02 17:06:38 WARNING 25 436 / admin 错误账号密码登陆尝试
+2018-05-02 17:06:47 WARNING 25 436 / ali 错误账号密码登陆尝试
+2018-05-02 17:06:53 WARNING 25 436 / ali 错误账号密码登陆尝试
+2018-05-02 17:06:56 WARNING 25 436 / ali 错误账号密码登陆尝试
+2018-05-02 17:08:56 INFO 23 729 / None 登陆成功
+2018-05-02 17:17:02 INFO 23 862 / aaa 登陆成功
+2018-05-02 17:20:06 INFO 23 862 / None 登陆成功
+2018-05-02 17:21:27 INFO 23 862 / aaa 登陆成功
+2018-05-02 17:23:15 INFO 23 1062 / aaa 登陆成功
+2018-05-02 17:24:31 INFO 23 1073 / None 登陆成功
+2018-05-02 17:25:56 INFO 23 1073 / aaa 登陆成功
+2018-05-02 17:37:46 INFO 23 1073 / None 登陆成功
+2018-05-02 17:59:52 INFO 23 1693 / aaa 登陆成功
+2018-05-02 18:02:10 INFO 23 1693 / None 登陆成功
+2018-05-02 18:10:16 INFO 23 2084 / bbb 登陆成功
+2018-05-03 09:56:15 INFO 23 5603 / None 登陆成功
+2018-05-03 10:55:03 WARNING 25 120721 / ali 错误账号密码登陆尝试
+2018-05-03 10:57:45 INFO 23 120960 / None 登陆成功
+2018-05-03 12:10:18 INFO 23 123747 / aa 登陆成功
+2018-05-03 12:11:26 INFO 23 123747 / None 登陆成功
+2018-05-03 12:12:39 INFO 23 123747 / aa 登陆成功
+2018-05-03 12:13:29 INFO 23 123747 / None 登陆成功
+2018-05-03 12:14:05 INFO 23 123747 / bb 登陆成功
+2018-05-03 12:14:40 INFO 23 123747 /sql_review/roll_back/5/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525320864_326_0'
+2018-05-03 12:14:40 INFO 23 123747 /sql_review/roll_back/5/ bb 执行获取回滚SQL：select  `rollback_statement` from b where `opid_time` = '1525320864_326_0' limit 20
+2018-05-03 12:15:45 INFO 23 123747 /sql_review/roll_back/5/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525320864_326_0'
+2018-05-03 12:15:45 INFO 23 123747 /sql_review/roll_back/5/ bb 执行获取回滚SQL：select  `rollback_statement` from b where `opid_time` = '1525320864_326_0' limit 20
+2018-05-03 13:42:49 INFO 23 123747 /sql_review/roll_back/6/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525326145_330_0'
+2018-05-03 13:42:49 INFO 23 123747 /sql_review/roll_back/6/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525326145_330_0' limit 20
+2018-05-03 14:07:29 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327586_345_0'
+2018-05-03 14:07:29 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327586_345_0' limit 20
+2018-05-03 14:09:09 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327586_345_0'
+2018-05-03 14:09:09 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327586_345_0' limit 20
+2018-05-03 14:09:09 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327726_356_0'
+2018-05-03 14:09:09 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327726_356_0' limit 20
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327586_345_0'
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327586_345_0' limit 20
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327726_356_0'
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327726_356_0' limit 20
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525327834_361_0'
+2018-05-03 14:10:53 INFO 23 123747 /sql_review/roll_back/11/ bb 执行获取回滚SQL：select  `rollback_statement` from name where `opid_time` = '1525327834_361_0' limit 20
+2018-05-03 17:24:55 INFO 23 31210 / aa 登陆成功
+2018-05-03 17:29:51 INFO 23 31210 / None 登陆成功
+2018-05-03 17:42:55 INFO 23 31210 / aa 登陆成功
+2018-05-03 17:53:42 INFO 23 31210 / bb 登陆成功
+2018-05-03 17:57:25 INFO 23 31210 / aa 登陆成功
+2018-05-03 18:03:38 INFO 23 32414 / None 登陆成功
+2018-05-11 18:42:39 INFO 23 34440 / aa 登陆成功
+2018-05-11 19:23:38 INFO 23 8426 / alili 登陆成功
+2018-05-12 01:23:55 INFO 23 61841 / alili 登陆成功
+2018-05-12 01:56:02 WARNING 25 62547 / test01 错误账号密码登陆尝试
+2018-05-12 01:56:08 WARNING 25 62547 / test1 错误账号密码登陆尝试
+2018-05-12 01:56:18 INFO 23 62547 / aa 登陆成功
+2018-05-12 02:26:22 INFO 23 63148 /sql_review/roll_back/14/ aa 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1525340233_25_0'
+2018-05-12 10:31:45 INFO 23 64657 / aa 登陆成功
+2018-05-12 23:53:12 INFO 23 67136 /sql_review/roll_back/17/ aa 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1526140330_62_1'
+2018-05-12 23:53:12 INFO 23 67136 /sql_review/roll_back/17/ aa 执行获取回滚SQL：select  `rollback_statement` from sbtest1 where `opid_time` = '1526140330_62_1' limit 20
+2018-05-12 23:55:20 INFO 23 67136 /sql_review/roll_back/17/ aa 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1526140330_62_1'
+2018-05-12 23:55:20 INFO 23 67136 /sql_review/roll_back/17/ aa 执行获取回滚SQL：select  `rollback_statement` from sbtest1 where `opid_time` = '1526140330_62_1' limit 20
+2018-05-12 23:55:20 INFO 23 67136 /sql_review/roll_back/17/ aa 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1526140486_64_1'
+2018-05-12 23:55:20 INFO 23 67136 /sql_review/roll_back/17/ aa 执行获取回滚SQL：select  `rollback_statement` from sbtest1 where `opid_time` = '1526140486_64_1' limit 20
+2018-05-16 18:44:02 WARNING 25 64145 / ali 错误账号密码登陆尝试
+2018-05-16 18:44:07 INFO 23 64145 / alili 登陆成功
+2018-05-17 17:47:25 INFO 23 89916 / aa 登陆成功
+2018-05-23 14:15:33 WARNING 25 115461 / lijinhong 错误账号密码登陆尝试
+2018-05-23 14:15:36 WARNING 25 115461 / lijinhong 错误账号密码登陆尝试
+2018-05-23 14:15:44 INFO 23 115461 / alili 登陆成功
+2018-05-23 14:30:56 WARNING 25 115918 / lijinhong 错误账号密码登陆尝试
+2018-05-23 14:31:04 WARNING 25 115918 / lijinhong 错误账号密码登陆尝试
+2018-05-23 14:31:05 WARNING 25 115918 / lijinhong 错误账号密码登陆尝试
+2018-05-23 14:31:15 INFO 23 115918 / alili 登陆成功
+2018-05-29 15:19:08 INFO 23 29670 / aa 登陆成功
+2018-05-29 16:21:43 INFO 23 30480 /sql_review/roll_back/15/ aa 执行SQL：select * from $_$Inception_backup_information$_$ where `opid_time` = '1527582100_40_1'
+2018-05-29 16:21:43 INFO 23 30480 /sql_review/roll_back/15/ aa 执行获取回滚SQL：select  `rollback_statement` from b where `opid_time` = '1527582100_40_1' limit 20
+2018-05-31 17:11:23 INFO 23 14955 / alili 登陆成功
+2018-06-04 18:27:58 INFO 23 37113 / aa 登陆成功

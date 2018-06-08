@@ -1,0 +1,14 @@
+[key]
+encrypt_key = 'a2V5c2tleXNrZXlza2V5cw==\n' 
+encrypt_iv = 'aXZpdml2aXZpdml2aXZpdg==\n' 
+
+[mysqllogin]
+admin_user=root
+admin_passwd=787d2f57ae39a1b1e1d43500a4a8c415
+
+review_user=root
+review_passwd=787d2f57ae39a1b1e1d43500a4a8c415
+
+[mysqltool]
+admin_user=root
+admin_passwd=787d2f57ae39a1b1e1d43500a4a8c415

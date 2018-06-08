@@ -1,0 +1,187 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    数据库管理平台-SQL审核
+{% endblock %}
+{% block heading %}
+    <h1><i class='fa fa-file'></i> SQL 审核</h1>
+    <h3>基于 Inception 开发，集SQL审核、自动备份、在线修改表结构等功能为一体的DB运维工具</h3>
+{% endblock %}
+{% load filters %}
+{% block content %}
+    <div class="col-md-12" >
+        <div class="widget">
+            <div class="widget-header transparent">
+                <h2><strong>已完成</strong> 列表</h2>
+                <div class="additional-btn">
+                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
+                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
+                </div>
+            </div>
+            <div class="widget-content" style="background-color: #f3f3f3">
+                <div class="table-responsive">
+                    <table class="table " style="background-color: #f3f3f3">
+                        <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="checkall">
+                            </th>
+                            <th style="text-align: center">ID</th>
+                            <th style="text-align: center">请求ID</th>
+                            <th style="text-align: center">执行序列</th>
+                            <th style="text-align: center">数据库IP</th>
+                            <th style="text-align: center">数据库名</th>
+                            <th style="text-align: center">数据表</th>
+                            <th style="text-align: center">SQL</th>
+                            <th style="text-align: center">回滚SQL</th>
+                            <th style="text-align: center">sql_sha1</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for list in rollback_list %}
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="single-checkbox" data-sequence="{{ list.sequence }}">
+                                    </td>
+                                    <td align="center">{{ list.id }}</td>
+                                    <td align="center">{{ list.review_record_id }}</td>
+
+                                    <td align="center">
+                                        {{ list.sequence }}
+                                    </td>
+                                    <td align="center">
+                                        {{ list.db_host }}
+                                    </td>
+                                    <td align="center">
+                                        {{ list.db_name }}
+                                    </td>
+                                    <td align="center">
+                                        {{ list.db_table_name }}
+                                    </td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
+                                                            data-target="#{{ list.id }}sqlModal"
+                                                            title="所审核SQL"
+                                                style="border-radius: 5px">
+                                            SQL
+                                        </button>
+                                    </td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
+                                                            data-target="#{{ list.id }}sqlRollbackModal"
+                                                            title="回滚SQL"
+                                                style="border-radius: 5px">
+                                            SQL
+                                        </button>
+                                    </td>
+                                    <td align="center">
+                                        {{ list.sql_sha1 }}
+                                    </td>
+                                </tr>
+                                <div class="modal fade" id="{{ list.id }}sqlModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">查看SQL</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{ list.sql }}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="{{ list.id }}sqlRollbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">查看回滚SQL</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{ list.rollback_statement | linebreaks }}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td align="center">
+                                    <a type="button" class="btn btn-primary btn-sm rollbackselect" data-user="">回滚所选</a>
+                                </td>
+                                <td align="center">
+                                    <a type="button" class="btn btn-primary btn-sm rollbackall" data-user="{% for rollback in rollback_list %}{{ rollback.sequence }},{% endfor %}">回滚全部</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        {% csrf_token %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+    <script>
+        function rollback(sequence_data){
+            var csrf = $('[name="csrfmiddlewaretoken"]').val();
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'sql_review_ajax_rollback_by_sequence' %}",
+                data: {
+                    'sequence': sequence_data
+                },
+                async: false,
+                dataType: 'json',
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", csrf);
+                },
+                success: function (data) {
+                    alert(data.message)
+                }
+            });
+        }
+        $('#checkall').on('change', function () {
+            var checkall = $(this);
+            $('.single-checkbox').each(function () {
+                if(checkall.prop('checked')){
+                    $(this).prop('checked', true)
+                }else{
+                    $(this).prop('checked', false)
+                }
+            });
+        });
+        $('.rollbackselect').on('click', function () {
+            var data = '';
+            $('.single-checkbox').each(function () {
+                if($(this).prop('checked')){
+                    data += $(this).attr('data-sequence') + ','
+                }
+            });
+            rollback(data)
+        });
+        $('.rollbackall').on('click', function () {
+            rollback($(this).attr('data-user'))
+        })
+    </script>
+{% endblock %}

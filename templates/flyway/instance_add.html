@@ -1,0 +1,145 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block extra_static_files %}
+    <link href="{% static 'assets/libs/jquery-notifyjs/styles/metro/notify-metro.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
+    <div class="col-sm-12 portlets">
+
+        <div class="widget">
+            <div class="widget-header transparent">
+                <h2><strong>请填写以下</strong> 表单</h2>
+                <div class="additional-btn">
+                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
+                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
+                </div>
+            </div>
+            <div class="widget-content padding">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="remask" class="col-sm-1 control-label">环境别名</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="remask" placeholder="如:t1_mysql57">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="is_shard" class="col-sm-1 control-label">选择是否分库</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" name="is_shard" id="is_shard">
+                                    <option value="">-- 选择是否分库 --</option>
+                                    <option value="db_main">----- 非分库请选择 ----- </option>
+                                    <option value="db_shard">----- 分库请选择 ----- </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="env_name" class="col-sm-1 control-label">选择环境</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" name="env_name" id="env_name">
+                                    <option value="">-- 选择环境 --</option>
+                                    <option value="stage">----- stage ----- </option>
+                                    <option value="qa2">----- qa2 ----- </option>
+                                    <option value="qa3">----- qa3 ----- </option>
+                                    <option value="qa4">----- qa4 ----- </option>
+                                    <option value="pre">----- pre ----- </option>
+                                    <option value="t1">----- t1 ----- </option>
+                                    <option value="t2">----- t2 ----- </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="instance1" class="col-sm-1 control-label">实例一 ip:port</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="instance1" placeholder="10.19.31.34:3306">
+                            </div>
+                        </div>
+                        <div class="form-group" id="forInstance2">
+                            <label for="instance2" class="col-sm-1 control-label">实例二 ip:port</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="instance2" placeholder="10.19.31.35:3306">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="branch" class="col-sm-1 control-label">git分支</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="branch" placeholder="master/release/develop/YC_RELEASE/YC_DEV">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-1 col-sm-1">
+                                <button type="submit" class="btn btn-default" id="submit">确认添加</button>
+                            </div>
+                            <div class="col-sm-1">
+                                <button type="reset" class="btn btn-default">重置</button>
+                            </div>
+                        </div>
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block heading %}
+    <h1><i class='fa fa-table'></i> 添加数据库实例</h1>
+    <h3>根据需求添加数据库实例，填写时确认IP端口相关信息，账号密码默认已设置，其中账号为flyway</h3>
+{% endblock %}
+
+{% block js %}
+    <script type="application/javascript">
+        $(function () {
+            $('#is_shard').on('change', function () {
+                // debugger;
+                var selectedValue=$(this).val();
+                if(selectedValue !="db_shard"){
+                    $("#forInstance2").hide();
+                }
+                else{
+                    $("#forInstance2").show();
+                }
+            });
+            // debugger;
+            $('#submit').on('click', function(){
+                var remask = $('#remask').val();
+                var is_shard = $('#is_shard').val();
+                var env_name = $('#env_name').val();
+                var instance1 = $('#instance1').val();
+                var instance2 = $('#instance2').val();
+                var branch = $('#branch').val();
+                var csrf = $('[name="csrfmiddlewaretoken"]').val();
+                // debugger;
+                $.ajax({
+                        type: "POST",
+                        url: "{% url 'deal_instance_add' %}",
+                        data: {
+                            'remask': remask,
+                            'is_shard': is_shard,
+                            'env_name': env_name,
+                            'instance1': instance1,
+                            'instance2': instance2,
+                            'branch': branch
+                        },
+                        dataType: 'json',
+                        beforeSend: function (xhr, settings) {
+                            xhr.setRequestHeader("X-CSRFToken", csrf);
+                        },
+                        success: function (data) {
+                            if (data.status == "error") {
+                                alert(data.result_content)
+                            }
+                            else {
+                                alert(data.result_content)
+                                location.href = "/flyway/instance_list";
+                            }
+                        }
+                    });
+                return false
+            })
+        })
+    </script>
+{% endblock %}

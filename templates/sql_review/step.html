@@ -1,0 +1,210 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block extra_static_files %}
+    <link href="{% static 'assets/libs/jquery-notifyjs/styles/metro/notify-metro.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
+    <div class="row" style="margin-left: 0;margin-right: 0;">
+        <div class="col-md-12 portlets">
+            <!-- Your awesome content goes here -->
+            <div class="widget animated fadeInDown">
+                <form id="myWizard" action="{% url 'sql_review_submit_step' %}" method="post">
+                    <section class="step" data-step-title="选取实例">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="selectGroup">选择数据库</label>
+                                    <select class="form-control" id="selectGroup" required name="instance_group">
+                                        <option value="none">-----请选择数据库------</option>
+                                        {% for instance_group in instance_groups %}
+                                            <option value="{{ instance_group.id }}">{{ instance_group.dbname }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputInstance">选择对应实例</label>
+                                    <select class="form-control" required id="inputInstance" name="instance">
+                                        <option value="none">-----请选择对应实例------</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputForWhat">执行目的</label>
+                                    <input type="text" required class="form-control" id="inputForWhat" name="for_what">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="notes">
+                                    <h4><strong>审查规范</strong> tips:</h4>
+                                    <p style="text-align: justify">
+                                        SQL 执行规范化是一个艰难且持久的过程
+                                    </p>
+                                    <ol>
+                                        {% for content in dict_content.content1 %}
+                                            <li>{{ content.content }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    <p style="text-align: right">
+                                        <a href="{% url 'sql_review_more_specification' %}">--more--</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="step" data-step-title="选取执行时间">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
+                                    <label for="date_picker" class="pull-left">选择执行日期</label><br/><br/>
+                                    <input style="width: 30%;border:1px solid #aeb9c0;border-radius: 3px;" type="text" id="execute_time"
+                                           class="pull-left" id="date_picker" required value="{{ start_time }}" name="execute_time" readonly>
+                                    <span class="add-on pull-left" >
+                                        <i class="icon-calendar" ></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="notes">
+                                    <h4><strong>审查规范</strong> tips:</h4>
+                                    <p style="text-align: justify">
+                                        SQL 执行规范化是一个艰难且持久的过程
+                                    </p>
+                                    <ol>
+                                        {% for content in dict_content.content2 %}
+                                            <li>{{ content.content }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    <p style="text-align: right">
+                                        <a href="{% url 'sql_review_more_specification' %}">--more--</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="step" data-step-title="提交SQL">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputSQL">请输入SQL：</label>
+                                    <textarea name="sql" id="inputSQL" cols="30" rows="15"
+                                              class="form-control"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="notes">
+                                    <h4><strong>审查规范</strong> tips:</h4>
+                                    <p style="text-align: justify">
+                                        SQL 执行规范化是一个艰难且持久的过程
+                                    </p>
+                                    <ol>
+                                        {% for content in dict_content.content3 %}
+                                            <li>{{ content.content }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                    <p style="text-align: right">
+                                        <a href="{% url 'sql_review_more_specification' %}">--more--</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block title %}
+    数据库管理平台-SQL审核
+{% endblock %}
+{% block heading %}
+    <h1><i class='fa fa-file'></i> SQL 提交</h1>
+    <h3>基于 Inception 开发，集SQL审核、自动备份、在线修改表结构等功能为一体的DB运维工具</h3>
+{% endblock %}
+{% block js %}
+    <script src="{% static 'assets/libs/jquery-wizard/jquery.easyWizard.js' %}"></script>
+    <script src="{% static 'assets/js/pages/form-wizard.js' %}"></script>
+    <script src="{% static 'assets/libs/jquery-notifyjs/notify.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jquery-notifyjs/styles/metro/notify-metro.js' %}"></script>
+    <script src="{% static 'assets/js/pages/notifications.js' %}"></script>
+    <script src="{% static 'assets/libs/jquery-icheck/icheck.min.js' %}"></script>
+
+    <script type="application/javascript">
+        $(function () {
+            $('#selectGroup').on('change', function () {
+                var group = $(this);
+                var csrf = $('[name="csrfmiddlewaretoken"]').val();
+                var instance = $('#inputInstance');
+                instance.empty();
+                instance.append($('<option value="none">-----请选择对应实例------</option>'));
+                $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "{% url 'instance_by_ajax_and_id' %}",
+                    data: {
+                        'group_id': group.val()
+                    },
+                    async: true,
+                    dataType: 'json',
+                    beforeSend: function (xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf);
+                    },
+                    success: function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            var tmp_node = "<option value='" + data[i].id + "'>" + data[i].env_name + "</option>";
+                            instance.append($(tmp_node))
+                        }
+                       // debugger;
+                    }
+                });
+
+            });
+            $(".form_datetime").datetimepicker({
+                format: "yyyy-mm-dd hh:ii",
+                autoclose: true,
+                todayBtn: true,
+                startDate: "{{ start_time }}",
+                minuteStep: 10
+            });
+            $('#myWizard').submit(function () {
+                var instance_group = $('#selectGroup').val();
+                var instance = $('#inputInstance').val();
+                var for_what = $('#inputForWhat').val();
+                var pm_name = $('#inputProjectManager').val();
+                var execute_time = $('#execute_time').val();
+                var sql = $('#inputSQL').val();
+                var csrf = $('[name="csrfmiddlewaretoken"]').val();
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'sql_review_submit_step' %}",
+                    data: {
+                        'instance_group': instance_group,
+                        'instance': instance,
+                        'for_what': for_what,
+                        'execute_time': execute_time,
+                        'sql': sql,
+                        'pm_name': pm_name
+                    },
+                    dataType: 'json',
+                    beforeSend: function (xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrf);
+                    },
+                    success: function (data) {
+                        if(data.result === 'success'){
+                            autohidenotify('success', '提交请求成功。', '正在做机器审核请稍等。');
+                            var timer = setTimeout(function(){
+                                location.href = '/sql_review/review_result/' + data.result_id
+                            }, 2000);
+                        }else {
+                            autohidenotify('error', '校验失败！！！', '请检查所填字段是否完整且正确，确认后再次提交');
+                        }
+                    }
+                });
+                return false;
+            });
+
+        })
+    </script>
+
+{% endblock %}

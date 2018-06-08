@@ -1,0 +1,104 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    数据库管理平台-SQL审核
+{% endblock %}
+{% block heading %}
+    <h1><i class='fa fa-file'></i> SQL 审核</h1>
+    <h3>基于 Inception 开发，集SQL审核、自动备份、在线修改表结构等功能为一体的DB运维工具</h3>
+{% endblock %}
+{% load filters %}
+{% block content %}
+    <div class="col-md-12">
+        <div class="widget">
+            <div class="widget-header transparent">
+                <h2><strong>审核</strong> 结果</h2>
+                <div class="additional-btn">
+                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
+                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
+                </div>
+            </div>
+            <div class="widget-content" style="background-color: #f3f3f3">
+                <div class="table-responsive">
+                    <table class="table " style="background-color: #f3f3f3">
+                        <thead>
+                        <tr>
+                            {% for item in field_names %}
+                                <th>{{ item }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for res in result %}
+                            {% with class=forloop.counter %}
+                                <tr>
+                                    {% for foo in res %}
+                                        {% if forloop.counter == 5 %}
+                                            <td>
+                                                {% if foo != 'None' %}
+                                                    <button type="button" class="btn btn-xs btn-danger"
+                                                            data-html="true" data-placement="left"
+                                                            data-toggle="popover" title="Error Message"
+                                                            data-content="{{ foo| linenumbers | linebreaks }}">error message
+                                                    </button>
+                                                {% else %}
+                                                    None
+                                                {% endif %}
+                                            </td>
+                                        {% elif forloop.counter == 6 %}
+                                            <td>
+                                                <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
+                                                        data-target="#{{ class }}sqlModal"
+                                                        title="所审核SQL" >SQL
+                                                </button>
+                                            </td>
+                                            <div class="modal fade" id="{{ class }}sqlModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                                    aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel">查看SQL</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            {{ foo | linenumbers | linebreaks }}
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% elif forloop.counter == 4 %}
+                                            <td>{{ foo | format_stage_status }}</td>
+                                        {% else %}
+                                            <td>{{ foo }}</td>
+                                        {% endif %}
+
+                                    {% endfor %}
+                                </tr>
+                            {% endwith %}
+
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <a href="{% url 'sql_review_rollback' record_id %}" type="button" class="{% if flag == 'failed'%}
+                        disabled
+                    {% endif %}btn btn-orange-2" style="float: right;margin-top: 10px"
+                            data-toggle="tooltip" data-placement="left"
+                            title="注意：DDL语句回滚操作，请重新提交SQL进行回滚">回滚
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+    <script>
+        $('[data-toggle="popover"]').popover();
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+{% endblock %}

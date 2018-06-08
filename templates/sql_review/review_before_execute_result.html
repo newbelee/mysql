@@ -1,0 +1,146 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    数据库管理平台-SQL审核
+{% endblock %}
+{% block heading %}
+    <h1><i class='fa fa-file'></i> SQL 审核</h1>
+    <h3>基于 Inception 开发，集SQL审核、自动备份、在线修改表结构等功能为一体的DB运维工具</h3>
+{% endblock %}
+{% load filters %}
+{% block content %}
+    <div class="col-md-12">
+        <div class="widget">
+            <div class="widget-header transparent">
+                <h2><strong>审核</strong> 结果</h2>
+                <div class="additional-btn">
+                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
+                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
+                </div>
+            </div>
+            <div class="widget-content" style="background-color: #f3f3f3">
+                <div class="table-responsive">
+                    <table class="table " style="background-color: #f3f3f3">
+                        <thead>
+                        <tr>
+                            {% for item in field_names %}
+                                {% if item == 'sqlsha1' %}
+                                    <th style="text-align: center"> osc 执行进度</th>
+                                {% else %}
+                                    <th style="text-align: center">{{ item }}</th>
+                                {% endif %}
+
+                            {% endfor %}
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for res in result %}
+                            <tr>
+                                {% with class=forloop.counter %}
+                                    {% for foo in res %}
+                                        {% if forloop.counter == 5 %}
+                                            <td align="center">
+                                                {% if foo != 'None' %}
+                                                    <button type="button" class="btn btn-xs btn-danger"
+                                                            data-html="true" data-placement="left"
+                                                            data-toggle="popover" title="Error Message"
+                                                            data-content="{{ foo| linenumbers | linebreaks }}">error message
+                                                    </button>
+                                                {% else %}
+                                                    None
+                                                {% endif %}
+                                            </td>
+                                        {% elif forloop.counter == 6 %}
+                                            <td align="center">
+                                                <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
+                                                        data-target="#{{ class }}sqlModal"
+                                                        title="所审核SQL">SQL
+                                                </button>
+                                            </td>
+                                            <div class="modal fade" id="{{ class }}sqlModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                                    aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel">查看SQL</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            {{ foo }}
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% elif forloop.counter == 11 %}
+                                            <td align="center">
+                                                {% if foo %}
+                                                    <a type="button" class="btn btn-xs btn-info" href="{% url 'sql_review_osc_process' foo %}" target="_blank">
+                                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                                    </a>
+                                                {% else %}
+                                                    非DDL无法查看
+                                                {% endif %}
+                                            </td>
+                                        {% elif forloop.counter == 4 %}
+                                            <td>{{ foo | format_stage_status }}</td>
+                                        {% else %}
+                                            <td align="center">{{ foo }}</td>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endwith %}
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <a href="{% url 'sql_review_sql_execute' 'ignore' record_id %}" type="button" class="btn btn-orange-2" style="float: right;margin: 10px 10px"
+                            data-toggle="tooltip" data-placement="left"
+                            title="注意：如无特殊情况，请拒绝忽略warn执行！">忽略warn执行
+                    </a>&nbsp;
+                    <a href="{% url 'sql_review_sql_execute' 'strict' record_id %}" type="button" class="btn btn-orange-2" style="float: right;margin: 10px 10px"
+                            data-toggle="tooltip" data-placement="left"
+                            title="注意：点击后将执行对应SQL">执行
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+    <script>
+        $('[title="Error Message"]').popover();
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.save-changes').on('click', function () {
+            $(this).attr('disabled', 'disabled');
+            $(this).html('Loading');
+            var sql = $("#modified-sql").val();
+            var csrf = $('[name="csrfmiddlewaretoken"]').val();
+            var record_id = $(this).attr('data-record-id');
+            $.ajax({
+                type: "POST",
+                url: "{% url 'sql_review_modify_submitted_sql' %}",
+                data: {
+                    'sql': sql,
+                    'record_id': record_id
+                },
+                dataType: 'json',
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", csrf);
+                },
+                success: function (data) {
+                    if(data.status === 'success'){
+                        location.href = '/sql_review/review_result/' + data.new_id
+                    }else {
+                        alert('failed')
+                    }
+                }
+            });
+        })
+    </script>
+{% endblock %}
