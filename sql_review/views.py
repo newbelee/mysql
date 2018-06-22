@@ -2,10 +2,15 @@
 #from __future__ import print_function
 from __future__ import unicode_literals
 from datetime import datetime, timedelta
+from django.db.models import Q
 from contextlib import contextmanager
-# import pymysql
+import pymysql
 import json
+import re
+import time
 from pymysql.constants.CLIENT import MULTI_STATEMENTS, MULTI_RESULTS
+###
+
 from django.http.response import HttpResponse, HttpResponseRedirect
 
 from django.shortcuts import render, redirect, reverse, render_to_response
@@ -22,7 +27,6 @@ from users.models import UserProfile, MessageRecord
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 
 from utils.log import my_logger
-import pymysql
 from mysql_platform.mysql_function import SQL
 from  .Inceptions import Inception
 from users.endecrypt import endeCrypt
@@ -46,6 +50,7 @@ def dictFetchall(cursor):
     ]
 
 
+
 @contextmanager
 def get_mysql_conn():
     conn = pymysql.connect(**conn_args)
@@ -53,7 +58,6 @@ def get_mysql_conn():
         yield conn
     finally:
         conn.close()
-
 
 
 @login_required()
@@ -211,7 +215,6 @@ def submit_to_ops(request, record_id):
 def reject_to_dev(request):
     # 拒绝执行sql，将审核状态置为2，写入通知消息到消息系统
     record_id = request.POST.get('record_id', 0)
-    print (record_id)
     if request.user.identity == 'project_manager':
         update_sql = "update t_sql_review_record set is_reviewed = 2 where id={0}".format(record_id)
     else:

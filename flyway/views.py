@@ -14,7 +14,7 @@ from django.core import serializers
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from mysql_platform.mysql_function import SQL
 
-s = SQL('192.168.175.130', 3306, 'sqltool', 'mysqltool','test_remote_sql')
+s = SQL('10.10.50.145', 3306, 'mysqltool_rw', 'f60sq8f5wz','yhops_db')
 
 
 t_depandency_api = "http://dependency-t1.yonghuivip.com/api/database/customMigrate"
@@ -237,6 +237,34 @@ def main_schema_list(request):
     }
     return render(request, 'flyway/main_schema_list.html', data)
 
+
+@login_required()
+def search_schema_list(request):
+    q = request.GET.get('q').strip()
+    if not q:
+        return render(request, 'error.html')
+    try:
+        page = int(request.GET.get('page', 1))
+        if page < 1:
+            page = 1
+    except ValueError:
+        page = 1
+    sql = """SELECT a.id,b.env,b.env_name,a.project_name,a.db_name,b.ip,b.`port`,b.branch
+          from yhops_flyway_db_detail a, yhops_flyway_env b where a.db_id =b.id and
+          b.env !='online' and a.db_name like '%{0}%' ORDER by b.env""".format(q)
+    record_list = s.execute_and_return_dict(sql)
+    p = Paginator(record_list, 10, request=request)
+    try:
+        record_list_in_pages = p.page(page)
+    except EmptyPage:
+        record_list_in_pages = p.page(1)
+    data = {
+        'record_list': record_list_in_pages,
+        'sub_module': '7_2_1'
+    }
+    return render(request, 'flyway/main_schema_list.html', data)
+
+
 @login_required()
 def shard_schema_list(request):
     try:
@@ -245,9 +273,9 @@ def shard_schema_list(request):
             page = 1
     except ValueError:
         page = 1
-    sql = """SELECT b.remask as env,c.project_name,GROUP_CONCAT(a.db_name order by a.id desc) as db_name,b.ip,b.`port`,
+    sql = """SELECT b.env_name,b.remask,c.project_name,GROUP_CONCAT(a.db_name order by a.id desc) as db_name,b.ip,b.`port`,
           b.branch,a.dir as sql_dir from yhops_flyway_sharding a, yhops_flyway_sharding_env b, yhops_project c
-          where a.flyway_sharding_id=b.id and a.project_id=c.id and b.env_name!='online' group by remark,ip,`port` ORDER BY env """
+          where a.flyway_sharding_id=b.id and a.project_id=c.id and b.env_name!='online' group by remark,ip,`port` ORDER BY b.remask """
     record_list = s.execute_and_return_dict(sql)
     p = Paginator(record_list, 10, request=request)
     try:
@@ -260,6 +288,36 @@ def shard_schema_list(request):
         'sub_module': '7_2_2'
     }
     return render(request, 'flyway/shard_schema_list.html', data)
+
+@login_required()
+def search_shard_schema_list(request):
+    q = request.GET.get('q').strip()
+    if not q:
+        return render(request, 'error.html') 
+
+    try:
+        page = int(request.GET.get('page', 1))
+        if page < 1:
+            page = 1
+    except ValueError:
+        page = 1
+    sql = """SELECT b.env_name,b.remask,c.project_name,GROUP_CONCAT(a.db_name order by a.id desc) as db_name,b.ip,b.`port`,
+          b.branch,a.dir as sql_dir from yhops_flyway_sharding a, yhops_flyway_sharding_env b, yhops_project c
+          where a.flyway_sharding_id=b.id and a.project_id=c.id and b.env_name!='online' and a.db_name like '%{0}%'
+	  group by remark,ip,`port` ORDER BY b.remask """.format(q)
+    record_list = s.execute_and_return_dict(sql)
+    p = Paginator(record_list, 10, request=request)
+    try:
+        record_list_in_pages = p.page(page)
+    except EmptyPage:
+        record_list_in_pages = p.page(1)
+
+    data = {
+        'record_list': record_list_in_pages,
+        'sub_module': '7_2_2'
+    }
+    return render(request, 'flyway/shard_schema_list.html', data)
+
 
 @login_required()
 def instance_add(request):

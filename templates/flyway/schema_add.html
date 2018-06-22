@@ -20,40 +20,50 @@
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form">
                     <div class="form-group">
-                            <label for="schema_name">输入数据库名</label>
-                            <input type="text" required class="form-control" id="schema_name" name="schema_name">
+                            <label for="schema_name" class="col-sm-1 control-label">输入数据库名</label>
+                            <div class="col-sm-5">
+                                <input type="text" required class="form-control" id="schema_name" name="schema_name">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="selectShard">选择是否分库</label>
-                            <select class="form-control" id="selectShard" required name="selectShard">
-                                <option value="none">-----请选择是否分库------</option>
-                                <option value="db_main">非分库</option>
-                                <option value="shard_16_01">16分库(规则：dbname_xx)</option>
-                                <option value="shard_16_02">16分库(规则：dbnamex_x)</option>
-                                <option value="shard_16_03">16分库(规则：dbnamexx)</option>
-                                <option value="shard_32_01">32分库(规则：dbname_xx)</option>
-                                <option value="shard_32_02">32分库(规则：dbnamex_x)</option>
-                                <option value="shard_32_03">32分库(规则：dbnamexx)</option>
-                            </select>
+                            <label for="selectShard" class="col-sm-1 control-label">选择是否分库</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="selectShard" required name="selectShard">
+                                    <option value="none">-----请选择是否分库------</option>
+                                    <option value="db_main">非分库</option>
+                                    <option value="shard_16_01">16分库(规则：dbname_xx)</option>
+                                    <option value="shard_16_02">16分库(规则：dbnamex_x)</option>
+                                    <option value="shard_16_03">16分库(规则：dbnamexx)</option>
+                                    <option value="shard_32_01">32分库(规则：dbname_xx)</option>
+                                    <option value="shard_32_02">32分库(规则：dbnamex_x)</option>
+                                    <option value="shard_32_03">32分库(规则：dbnamexx)</option>
+                                </select>
+			    </div>
                         </div>
                         <div class="form-group">
-                            <label for="sql_dir">选择sql_dir</label>
-                            <select class="form-control" id="sql_dir" name="sql_dir">
-                                <option value="none">----- 请选择SQL目录 -----</option>
-                                <option value="shard_sql">----- shard-sql -----</option>
-                            </select>
+                            <label for="sql_dir" class="col-sm-1 control-label">选择sql_dir</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="sql_dir" name="sql_dir">
+                                    <option value="none">----- 请选择SQL目录 -----</option>
+                                    <option value="shard_sql">----- shard-sql -----</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="select_env">选择环境</label>
-                            <select class="form-control" required id="select_env" name="select_env">
-                                <option value="none">----- 请选择对应环境 -----</option>
-                            </select>
+                            <label for="select_env" class="col-sm-1 control-label">选择环境</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" required id="select_env" name="select_env">
+                                    <option value="none">----- 请选择对应环境 -----</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group ">
-                            <label for="select_instance">选择对应实例</label>
-                            <select class="form-control" required id="select_instance" name="select_instance">
-                                <option value="none">-----请选择对应实例------</option>
-                            </select>
+                            <label for="select_instance" class="col-sm-1 control-label">选择对应实例</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" required id="select_instance" name="select_instance">
+                                    <option value="none">-----请选择对应实例------</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-1 col-sm-1">

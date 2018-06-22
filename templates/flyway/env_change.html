@@ -21,19 +21,23 @@
                     <form class="form-horizontal" role="form">
                     <div class="form-group">
                         <div class="form-group">
-                            <label for="select_env">选择环境</label>
-                            <select class="form-control" required id="select_env" name="select_env">
-                                <option value="none">----- 请选择对应环境 -----</option>
-                                {% for list in record_list %}
-                                    <option value={{ list.env }}>-----{{ list.env }} -----</option>
-                                {% endfor%}
-                            </select>
+                            <label for="select_env" class="col-sm-1 control-label">选择环境</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" required id="select_env" name="select_env">
+                                    <option value="none">----- 请选择对应环境 -----</option>
+                                    {% for list in record_list %}
+                                        <option value={{ list.env }}>-----{{ list.env }} -----</option>
+                                    {% endfor%}
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group ">
-                            <label for="select_instance">选择对应实例</label>
-                            <select class="form-control" required id="select_instance" name="select_instance">
-                                <option value="none">-----请选择对应实例------</option>
-                            </select>
+                            <label for="select_instance" class="col-sm-1 control-label">选择对应实例</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" required id="select_instance" name="select_instance">
+                                    <option value="none">-----请选择对应实例------</option>
+                                </select>
+                            </div>  
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-1 col-sm-1">

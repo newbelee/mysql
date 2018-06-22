@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^sql_review/', include('sql_review.urls')),
     url(r'^users/', include('users.urls')),
     url(r'^flyway/', include('flyway.urls')),
+    url(r'^sql_query/', include('sql_query.urls')),
     url(r'^$', LoginView.as_view(), name='users_login'),
 
 ]

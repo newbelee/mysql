@@ -12,7 +12,7 @@ user, password = ende.get_mysqltool_user_pass()
 schema = "platform"
 
 class SQL():
-    def __init__(self, host=host, port=port, user=user, password=password,schema=schema, charset="utf8mb4"):
+    def __init__(self, host=host, port=port, schema=schema, user=user, password=password, charset="utf8mb4"):
         self.host = host
         self.port = port
         self.user = user

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from .views import schema_add, instance_add, main_schema_list, shard_schema_list,env_name_by_ajax_and_is_shard,host_by_ajax_and_env_name,flyway_submit_step,deal_instance_add,all_instance_list,deal_change_env_step,deal_change_env_submit,deal_delete_schema_env
+from .views import schema_add, instance_add, main_schema_list, shard_schema_list,env_name_by_ajax_and_is_shard,host_by_ajax_and_env_name,flyway_submit_step,deal_instance_add,all_instance_list,deal_change_env_step,deal_change_env_submit,deal_delete_schema_env,search_schema_list,search_shard_schema_list
 
 urlpatterns = [
     url(r'^schema_add/', schema_add, name='schema_add'),
@@ -29,4 +29,6 @@ urlpatterns = [
     url(r'^deal_instance_add/', deal_instance_add, name='deal_instance_add'),
     url(r'^change_env_submit/', deal_change_env_submit, name='deal_change_env_submit'),
     url(r'^deal_delete_schema_env/', deal_delete_schema_env, name='deal_delete_schema_env'),
+    url(r'^search_schema_list/', search_schema_list, name='search_schema_list'),
+    url(r'^shard_shard_schema/', search_shard_schema_list, name='search_shard_schema_list'),
 ]

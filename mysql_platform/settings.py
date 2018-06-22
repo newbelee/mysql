@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'statistics',
     'users',
     'flyway',
-    'pure_pagination'
+    'pure_pagination',
+    'sql_query'
 ]
 
 MIDDLEWARE = [
@@ -137,6 +138,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "templates/corporate/assets"),
 )
+QUERY = True
+DATA_MASKING_ON_OFF = False
+ALIYUN_RDS_MANAGE = False
 
 # for inception settings
 INCEPTION_IP = '127.0.0.1'
@@ -160,7 +164,14 @@ PAGINATION_SETTINGS = {
 EMAIL_HOST = 'mail.code502.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'ali@code502.com'
-EMAIL_HOST_PASSWORD = 'xiaoyanyan'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_FROM = "ali@code502.com"
 
+#设置关闭浏览器则session信息过期
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+#session信息3600秒过期
+
+# sqladvisor的路径配置，如'/opt/SQLAdvisor/sqladvisor/sqladvisor'，''代表关闭，隐藏菜单和相关功能
+SQLADVISOR = '/usr/bin/sqladvisor'
+SESSION_COOKIE_AGE = 3

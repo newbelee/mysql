@@ -1,0 +1,131 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    数据库管理平台-SQL审核
+{% endblock %}
+{% block heading %}
+    <h1><i class='fa fa-file'></i> SQL 审核</h1>
+    <h3>基于 Inception 开发，集SQL审核、自动备份、在线修改表结构等功能为一体的DB运维工具</h3>
+{% endblock %}
+{% load filters %}
+{% block content %}
+    <div class="col-md-12">
+        <div class="widget">
+            <div class="widget-header transparent">
+                <h2><strong>DB环境</strong> 列表</h2>
+                <div class="additional-btn">
+                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
+                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
+                </div>
+            </div>
+            <div class="widget-content" style="background-color: #f3f3f3">
+                <div class="table-responsive">
+                    <table class="table " style="background-color: #f3f3f3">
+                        <thead>
+                        <tr>
+                            <th style="text-align: center">ID</th>
+                            <th style="text-align: center">环境名称</th>
+                            <th style="text-align: center">环境别名</th>
+                            <th style="text-align: center">项目名称</th>
+                            <th style="text-align: center">DB 名称</th>
+                            <th style="text-align: center">实例 IP</th>
+                            <th style="text-align: center">实例端口</th>
+                            <th style="text-align: center">git分支</th>
+                            <th style="text-align: center">操作</th>
+
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for list in record_list.object_list %}
+                            <tr>
+                                <td align="center">{{ list.id }}</td>
+                                <td align="center">{{ list.env }}</td>
+                                <td align="center">{{ list.env_name }}</td>
+                                <td align="center">{{ list.project_name }}</td>
+                                <td align="center">{{ list.db_name }}</td>
+                                <td align="center">{{ list.ip }}</td>
+                                <td align="center">{{ list.port }}</td>
+                                <td align="center">{{ list.branch }}</td>
+                                <td align="center">
+                                    <a data-record-id="{{ list.id }}" type="button"
+                                           class="btn btn-default btn-xs deal_delete_record">
+                                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span> Delete record
+                                    </a>
+
+                                    <a href="{% url 'deal_change_env' list.id %}" type="button"
+                                       class="btn btn-default btn-xs">
+                                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span> Change env
+                                    </a>
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {% csrf_token %}
+                    <div class="dataTables_paginate paging_bootstrap pull-right" id="datatables-1_paginate">
+                        <ul class="pagination">
+                            {% if record_list.has_previous %}
+                                <li ><a href="?{{ record_list.previous_page_number.querystring }}">上一页</a>
+                                </li>
+                            {% else %}
+                                <li class="prev disabled"><a>首页</a>
+                                </li>
+                            {% endif %}
+                            {% for page in record_list.pages %}
+                                {% if page %}
+                                    {% ifequal page record_list.number %}
+                                        <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                                    {% endifequal %}
+                                {% else %}
+                                    <li ><a href="">...</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if record_list.has_next %}
+                                <li ><a href="?{{ record_list.next_page_number.querystring }}">下一页</a></li>
+                            {% else %}
+                                <li class="prev disabled"><a>尾页</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+    <script>
+    $('.deal_delete_record').on('click', function () {
+        $(this).attr('disabled', 'disabled');
+        $(this).html('Deleting');
+        var button_obj = $(this);
+        var record_id = $(this).attr('data-record-id');
+        var csrf = $('[name="csrfmiddlewaretoken"]').val();
+        $.ajax({
+            type: "POST",
+            url: "{% url 'deal_delete_schema_env' %}",
+            data: {
+                'record_id': record_id
+            },
+            dataType: 'json',
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", csrf);
+            },
+            success: function (data) {
+                if (data.status == "error") {
+                    alert(data.result_content)
+                    location.href = "/flyway/main_schema_info";
+                }else {
+                    alert(data.result_content)
+                    location.href = "/flyway/main_schema_info";
+                }
+            }
+        });
+    });
+    </script>
+{% endblock %}

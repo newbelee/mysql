@@ -1,0 +1,1377 @@
+[11/Jun/2018 11:49:19] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 11:49:19] "GET /statistics/topology/ HTTP/1.1" 200 23765
+[11/Jun/2018 11:49:32] "GET /sql_review/more_specification/ HTTP/1.1" 200 23027
+[11/Jun/2018 11:49:40] "GET /sql_review/more_specification/ HTTP/1.1" 200 23027
+[11/Jun/2018 11:49:47] "GET /sql_review/more_specification/index.html HTTP/1.1" 200 23027
+[11/Jun/2018 11:49:56] "GET /sql_review/more_specification/index.html HTTP/1.1" 200 23027
+[11/Jun/2018 11:50:01] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 11:50:04] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 11:50:05] "GET /static/assets/libs/jquery-datatables/js/dataTables.bootstrap.js HTTP/1.1" 200 4435
+[11/Jun/2018 11:50:05] "GET /static/assets/js/pages/datatables.js HTTP/1.1" 200 2107
+[11/Jun/2018 11:50:05] "GET /static/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js HTTP/1.1" 200 30729
+[11/Jun/2018 11:50:05] "GET /static/assets/libs/jquery-datatables/js/jquery.dataTables.min.js HTTP/1.1" 200 75919
+[11/Jun/2018 11:50:19] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 11:50:31] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41494
+[11/Jun/2018 11:50:42] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 51967
+[11/Jun/2018 11:55:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:00:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:05:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:10:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:15:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:20:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:25:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:30:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:35:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:40:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:45:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:50:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 12:55:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:00:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:05:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:10:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:15:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:20:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:25:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:30:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:35:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:40:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:45:43] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 13:48:52] "GET /flyway/shard_schema_info/?page=2 HTTP/1.1" 200 52212
+[11/Jun/2018 13:48:54] "GET /flyway/shard_schema_info/?page=2 HTTP/1.1" 200 52212
+[11/Jun/2018 13:49:02] "GET /flyway/shard_schema_info/?page=9 HTTP/1.1" 200 46256
+[11/Jun/2018 13:49:49] "GET /flyway/shard_schema_info/?page=8 HTTP/1.1" 200 51482
+[11/Jun/2018 13:49:51] "GET /flyway/shard_schema_info/?page=7 HTTP/1.1" 200 51990
+[11/Jun/2018 13:49:54] "GET /flyway/shard_schema_info/?page=1 HTTP/1.1" 200 51967
+[11/Jun/2018 13:50:59] "GET /flyway/shard_schema_info/?page=1 HTTP/1.1" 200 51973
+[11/Jun/2018 13:51:02] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41496
+[11/Jun/2018 13:52:58] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41487
+Internal Server Error: /flyway/shard_schema_info/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/data/mysql_platform/flyway/views.py", line 290, in shard_schema_list
+    return render(request, 'flyway/shard_schema_list.html', data)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 632, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search_shard_schema_list' not found. 'search_shard_schema_list' is not a valid view function or pattern name.
+[11/Jun/2018 13:53:31] "GET /flyway/shard_schema_info/ HTTP/1.1" 500 171032
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 11:48:58
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x2afe65c86d90>
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 364, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 351, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/registry.py", line 73, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/mysql_platform/urls.py", line 25, in <module>
+    url(r'^flyway/', include('flyway.urls')),
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/flyway/urls.py", line 17, in <module>
+    from .views import schema_add, instance_add, main_schema_list, shard_schema_list,env_name_by_ajax_and_is_shard,host_by_ajax_and_env_name,flyway_submit_step,deal_instance_add,all_instance_list,deal_change_env_step,deal_change_env_submit,deal_delete_schema_env,search_schema_list,search_shard_schema_list
+ImportError: cannot import name 'search_shard_schema_list'
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x2b09dbc5ad90>
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 364, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 351, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/registry.py", line 73, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/mysql_platform/urls.py", line 25, in <module>
+    url(r'^flyway/', include('flyway.urls')),
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/flyway/urls.py", line 17, in <module>
+    from .views import schema_add, instance_add, main_schema_list, shard_schema_list,env_name_by_ajax_and_is_shard,host_by_ajax_and_env_name,flyway_submit_step,deal_instance_add,all_instance_list,deal_change_env_step,deal_change_env_submit,deal_delete_schema_env,search_schema_list,search_shard_schema_list
+ImportError: cannot import name 'search_shard_schema_list'
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x2b0181252d90>
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 364, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 351, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/registry.py", line 73, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/mysql_platform/urls.py", line 25, in <module>
+    url(r'^flyway/', include('flyway.urls')),
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/flyway/urls.py", line 17, in <module>
+    from .views import schema_add, instance_add, main_schema_list, shard_schema_list,env_name_by_ajax_and_is_shard,host_by_ajax_and_env_name,flyway_submit_step,deal_instance_add,all_instance_list,deal_change_env_step,deal_change_env_submit,deal_delete_schema_env,search_schema_list,search_shard_schema_list
+ImportError: cannot import name 'search_shard_schema_list'
+Performing system checks...
+
+[11/Jun/2018 13:59:53] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:00:02] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=meh7bzvtYmBqgjv2geSDfSKCOjRSjtwLCuaOaecNlgzftRcp6Z51tAYVrMS3LnLb&q=order_db HTTP/1.1" 200 29706
+[11/Jun/2018 14:00:06] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:00:10] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41513
+[11/Jun/2018 14:00:14] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:00:19] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=p1blHnGg0RcySgIoCkuobuR2HnhPVuJEFh42G2nAnLan5OpLs5HMpc5lkQi0noY4&q=order_db HTTP/1.1" 200 29706
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 13:58:52
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[11/Jun/2018 14:01:17] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41490
+[11/Jun/2018 14:01:23] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:03:05] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:03:07] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41610
+[11/Jun/2018 14:03:56] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41570
+[11/Jun/2018 14:04:17] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41619
+[11/Jun/2018 14:04:30] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41619
+[11/Jun/2018 14:05:07] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52421
+[11/Jun/2018 14:05:09] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52421
+[11/Jun/2018 14:05:10] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52421
+[11/Jun/2018 14:05:15] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52421
+[11/Jun/2018 14:05:18] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41599
+[11/Jun/2018 14:05:25] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41630
+[11/Jun/2018 14:05:27] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52421
+[11/Jun/2018 14:05:42] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+[11/Jun/2018 14:05:46] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=7Q1NJMZL6ut2DJAOLb7nBmoDBjt3dgZtn6UuIrG5torRQhhbBWkLP4CWeMueFaeT&q=order_db HTTP/1.1" 200 44012
+[11/Jun/2018 14:05:57] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=nxWyjiVpIarC4NmcGm8150huVQGtRbgxDNPfiXCJ54prhl3zw7lpjIvNyjHEj5vX&q=paymen HTTP/1.1" 200 34958
+[11/Jun/2018 14:06:13] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41622
+[11/Jun/2018 14:06:19] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52359
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 14:01:04
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[11/Jun/2018 14:09:12] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53006
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 14:08:16
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[11/Jun/2018 14:11:17] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 14:11:18] "GET /statistics/topology/ HTTP/1.1" 200 23765
+[11/Jun/2018 14:11:21] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41608
+Internal Server Error: /flyway/shard_schema_info/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/data/mysql_platform/flyway/views.py", line 282, in shard_schema_list
+    record_list_in_pages = p.page(page)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/pure_pagination/paginator.py", line 54, in page
+    return Page(self.object_list[bottom:top], number, self)
+TypeError: unhashable type: 'slice'
+[11/Jun/2018 14:11:23] "GET /flyway/shard_schema_info/ HTTP/1.1" 500 76331
+Internal Server Error: /flyway/shard_schema_info/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/data/mysql_platform/flyway/views.py", line 282, in shard_schema_list
+    record_list_in_pages = p.page(page)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/pure_pagination/paginator.py", line 54, in page
+    return Page(self.object_list[bottom:top], number, self)
+TypeError: unhashable type: 'slice'
+[11/Jun/2018 14:11:51] "GET /flyway/shard_schema_info/ HTTP/1.1" 500 76466
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 14:10:51
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[11/Jun/2018 14:14:40] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53006
+[11/Jun/2018 14:16:18] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53084
+[11/Jun/2018 14:16:24] "GET /flyway/shard_schema_info/?page=2 HTTP/1.1" 200 53281
+[11/Jun/2018 14:16:28] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=cFJ8fs9GO2VLh2TUrGW6P27jxOs5BPlEsVCPe7Q0bWTAuAAhhr9u3KlCahtg3JA4&q=order_db HTTP/1.1" 200 44579
+[11/Jun/2018 14:17:29] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 14:17:35] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:18:03] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 14:18:27] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:18:29] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 14:18:30] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:18:32] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:18:36] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:18:37] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 14:19:17] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:24:17] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 14:25:20] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:25:22] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:25:24] "GET /flyway/schema_add/ HTTP/1.1" 200 31393
+[11/Jun/2018 14:25:41] "GET /flyway/schema_add/ HTTP/1.1" 200 31361
+[11/Jun/2018 14:26:57] "GET /flyway/schema_add/ HTTP/1.1" 200 31443
+[11/Jun/2018 14:31:58] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 14:34:21] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41619
+[11/Jun/2018 14:34:26] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=MuLOaPQAgmxP7srHbiasLFFlzERZQk7v2KEv9uxUDgvEk08413nQZnTEc7SaiemV&q=message_bridge_db HTTP/1.1" 200 28480
+[11/Jun/2018 14:37:00] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41619
+[11/Jun/2018 14:37:04] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53084
+[11/Jun/2018 14:37:05] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:37:07] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:37:11] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:37:13] "GET /flyway/schema_add/ HTTP/1.1" 200 31567
+[11/Jun/2018 14:37:18] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:37:20] "GET /flyway/instance_add/ HTTP/1.1" 200 30630
+[11/Jun/2018 14:37:24] "GET /flyway/schema_add/ HTTP/1.1" 200 31567
+[11/Jun/2018 14:37:54] "GET /flyway/schema_add/ HTTP/1.1" 200 31567
+[11/Jun/2018 14:37:56] "GET /flyway/schema_add/ HTTP/1.1" 200 31567
+[11/Jun/2018 14:37:57] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:37:59] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:38:00] "GET /flyway/schema_add/ HTTP/1.1" 200 31567
+[11/Jun/2018 14:38:28] "GET /flyway/schema_add/ HTTP/1.1" 200 31618
+[11/Jun/2018 14:38:31] "GET /flyway/schema_add/ HTTP/1.1" 200 31618
+[11/Jun/2018 14:39:37] "GET /flyway/schema_add/ HTTP/1.1" 200 31771
+[11/Jun/2018 14:42:21] "GET /flyway/schema_add/ HTTP/1.1" 200 31915
+[11/Jun/2018 14:44:08] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41619
+[11/Jun/2018 14:44:11] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=f42tILJ3W4DPJlw2IE041JyEwhbdEIpsvkVaHqqnjYBEWTdpypdsfrMX9Kco6CES&q=order_db HTTP/1.1" 200 29828
+[11/Jun/2018 14:44:37] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:44:38] "GET /flyway/schema_add/ HTTP/1.1" 200 31915
+[11/Jun/2018 14:44:57] "GET /flyway/schema_add/ HTTP/1.1" 200 32009
+[11/Jun/2018 14:45:02] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:45:12] "GET /flyway/schema_add/ HTTP/1.1" 200 32009
+[11/Jun/2018 14:47:14] "GET /flyway/schema_add/ HTTP/1.1" 200 32009
+[11/Jun/2018 14:47:19] "GET /flyway/instance_list/ HTTP/1.1" 200 115778
+[11/Jun/2018 14:47:36] "GET /flyway/instance_list/ HTTP/1.1" 200 115784
+[11/Jun/2018 14:48:02] "GET /flyway/instance_list/ HTTP/1.1" 200 115777
+[11/Jun/2018 14:48:12] "GET /flyway/instance_list/ HTTP/1.1" 200 115777
+[11/Jun/2018 14:48:28] "GET /flyway/instance_list/ HTTP/1.1" 200 115777
+[11/Jun/2018 14:48:29] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41629
+[11/Jun/2018 14:48:30] "GET /flyway/deal_change_env/692/ HTTP/1.1" 200 28857
+[11/Jun/2018 14:50:36] "GET /flyway/deal_change_env/692/ HTTP/1.1" 200 29177
+[11/Jun/2018 14:50:43] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 155
+[11/Jun/2018 14:50:58] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 67
+[11/Jun/2018 14:51:06] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 1006
+[11/Jun/2018 14:51:18] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 14:51:18] "GET /statistics/topology/ HTTP/1.1" 200 23764
+[11/Jun/2018 14:51:49] "GET /statistics/topology/ HTTP/1.1" 200 23776
+[11/Jun/2018 14:51:58] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 14:52:14] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 14:52:16] "GET /flyway/instance_list/ HTTP/1.1" 200 115783
+[11/Jun/2018 14:52:18] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41628
+[11/Jun/2018 14:56:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 14:57:18] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:01:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:02:18] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:08:56] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 15:08:56] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 15:09:00] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:09:09] "GET /flyway/instance_list/ HTTP/1.1" 200 115783
+[11/Jun/2018 15:09:23] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41635
+[11/Jun/2018 15:14:24] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:15:51] "GET / HTTP/1.1" 200 8499
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css HTTP/1.1" 200 27231
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 21984
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/nifty-modal/css/component.css HTTP/1.1" 200 13194
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/animate-css/animate.min.css HTTP/1.1" 200 41626
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/fontello/css/fontello.css HTTP/1.1" 200 50264
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 113498
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/magnific-popup/magnific-popup.css HTTP/1.1" 200 7786
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/pace/pace.css HTTP/1.1" 200 2195
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/ios7-switch/ios7-switch.css HTTP/1.1" 200 4783
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/sortable/sortable-theme-bootstrap.css HTTP/1.1" 200 2746
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4953
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/all.css HTTP/1.1" 200 1568
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/prettify/github.css HTTP/1.1" 200 1487
+[11/Jun/2018 15:15:51] "GET /static/assets/css/style-responsive.css HTTP/1.1" 200 6755
+[11/Jun/2018 15:15:51] "GET /static/images/users/default-user.png HTTP/1.1" 200 622
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/minimal/_all.css HTTP/1.1" 200 15734
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/square/_all.css HTTP/1.1" 200 15591
+[11/Jun/2018 15:15:51] "GET /static/assets/css/style.css HTTP/1.1" 200 113427
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/flat/_all.css HTTP/1.1" 200 13773
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/line/_all.css HTTP/1.1" 200 21689
+[11/Jun/2018 15:15:51] "GET /static/assets/libs/jquery-icheck/skins/polaris/polaris.css HTTP/1.1" 200 1557
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-icheck/skins/futurico/futurico.css HTTP/1.1" 200 1421
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js HTTP/1.1" 200 1291
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-detectmobile/detect.js HTTP/1.1" 200 2225
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 35601
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery/jquery-1.11.1.min.js HTTP/1.1" 200 95786
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js HTTP/1.1" 200 1729
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/ios7-switch/ios7.switch.js HTTP/1.1" 200 2142
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/fastclick/fastclick.js HTTP/1.1" 200 22297
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 200 65452
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-blockui/jquery.blockUI.js HTTP/1.1" 200 19910
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/bootstrap-bootbox/bootbox.min.js HTTP/1.1" 200 8418
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13768
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js HTTP/1.1" 200 223870
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-sparkline/jquery-sparkline.js HTTP/1.1" 200 43247
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/nifty-modal/js/classie.js HTTP/1.1" 200 1835
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/nifty-modal/js/modalEffects.js HTTP/1.1" 200 1361
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/sortable/sortable.min.js HTTP/1.1" 200 2341
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/bootstrap-fileinput/bootstrap.file-input.js HTTP/1.1" 200 4711
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/bootstrap-select/bootstrap-select.min.js HTTP/1.1" 200 18025
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/pace/pace.min.js HTTP/1.1" 200 10939
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/magnific-popup/jquery.magnific-popup.min.js HTTP/1.1" 200 20947
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 13776
+[11/Jun/2018 15:15:52] "GET /static/assets/libs/jquery-icheck/icheck.min.js HTTP/1.1" 200 4501
+[11/Jun/2018 15:15:53] "GET /static/assets/libs/bootstrap-select2/select2.min.js HTTP/1.1" 200 60215
+[11/Jun/2018 15:15:53] "GET /static/assets/libs/prettify/prettify.js HTTP/1.1" 200 14551
+[11/Jun/2018 15:15:53] "GET /static/assets/js/init.js HTTP/1.1" 200 12672
+Not Found: /favicon.ico
+[11/Jun/2018 15:15:53] "GET /favicon.ico HTTP/1.1" 404 2540
+[11/Jun/2018 15:16:06] "POST / HTTP/1.1" 302 0
+[11/Jun/2018 15:16:06] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 15:16:06] "GET /static/assets/libs/bootstrap-datepicker/css/bootstrap-datetimepicker.min.css HTTP/1.1" 200 11276
+[11/Jun/2018 15:16:06] "GET /static/images/users/user-35.jpg HTTP/1.1" 200 764
+[11/Jun/2018 15:16:06] "GET /static/assets/libs/bootstrap-datepicker/js/bootstrap-datetimepicker.min.js HTTP/1.1" 200 39213
+[11/Jun/2018 15:16:06] "GET /static/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23320
+[11/Jun/2018 15:16:06] "GET /static/images/public/ops.bmp HTTP/1.1" 200 30054
+[11/Jun/2018 15:16:07] "GET /static/assets/libs/fontello/font/fontello.woff?66697216 HTTP/1.1" 200 117936
+[11/Jun/2018 15:16:07] "GET /static/assets/js/echarts.min.js HTTP/1.1" 200 643788
+[11/Jun/2018 15:16:15] "GET /flyway/instance_add/ HTTP/1.1" 200 30635
+[11/Jun/2018 15:16:16] "GET /static/assets/libs/jquery-notifyjs/styles/metro/notify-metro.css HTTP/1.1" 200 1156
+[11/Jun/2018 15:16:17] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[11/Jun/2018 15:16:49] "GET /flyway/instance_add/ HTTP/1.1" 200 30635
+[11/Jun/2018 15:16:51] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:18:25] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[11/Jun/2018 15:18:35] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[11/Jun/2018 15:19:23] "GET /flyway/instance_add/ HTTP/1.1" 200 30635
+[11/Jun/2018 15:19:24] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:19:30] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:22:17] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[11/Jun/2018 15:24:17] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:24:24] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:24:27] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 147
+[11/Jun/2018 15:24:47] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 671
+[11/Jun/2018 15:24:49] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 155
+[11/Jun/2018 15:25:21] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[11/Jun/2018 15:25:23] "GET /flyway/main_schema_info HTTP/1.1" 301 0
+[11/Jun/2018 15:25:24] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41640
+[11/Jun/2018 15:25:33] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=O049VMzzEOjHpnpQstVEvgNkbUV8eUXftfQOCPYkb0LoGBAWVMsv3uyWFsTVvhak&q=ops-test HTTP/1.1" 200 27115
+[11/Jun/2018 15:25:38] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=jltKtAsq66vFrqWRz3Z0MR9dSupmWgubYAfpaDRbDiXmIE7X2mwRk5UPm2n9dDHg&q=ops_test HTTP/1.1" 200 28459
+[11/Jun/2018 15:26:22] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:26:31] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 125
+[11/Jun/2018 15:27:47] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 208
+[11/Jun/2018 15:29:00] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41635
+[11/Jun/2018 15:29:10] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=m8dieVutbU8aOgzGfRnE3Za9S1yxNQqQ1nZXVYTeI6AR5uKMIaUvBdVLmzwk4dDV&q=ops_test HTTP/1.1" 200 28459
+[11/Jun/2018 15:29:15] "GET /flyway/deal_change_env/1964/ HTTP/1.1" 200 29184
+[11/Jun/2018 15:29:19] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 155
+[11/Jun/2018 15:29:24] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:29:36] "POST /flyway/change_env_submit/ HTTP/1.1" 200 104
+[11/Jun/2018 15:29:37] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41640
+[11/Jun/2018 15:29:43] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=2YycZISYdh7opgXftqKEk7IbXZM5dwMSHdkRGLhJKtz5Gu8lWJhvSltNrxKSuTZX&q=ops_test HTTP/1.1" 200 28475
+[11/Jun/2018 15:29:51] "POST /flyway/deal_delete_schema_env/ HTTP/1.1" 200 128
+[11/Jun/2018 15:29:53] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41623
+[11/Jun/2018 15:29:57] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=OzxjteoBFZuNE2p3Cn5nnWRBIA5TB03TtOjYahNmcbWuVgA95GCeVaCdc83GSngY&q=ops_test HTTP/1.1" 200 27115
+Internal Server Error: /flyway/search_schema_list/profile.html
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/data/mysql_platform/flyway/views.py", line 243, in search_schema_list
+    q = request.GET.get('q').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+[11/Jun/2018 15:31:35] "GET /flyway/search_schema_list/profile.html HTTP/1.1" 500 70973
+Not Found: /flyway
+[11/Jun/2018 15:31:57] "GET /flyway HTTP/1.1" 404 2525
+[11/Jun/2018 15:32:01] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 15:32:01] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 15:32:12] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 15:34:24] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:37:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:38:24] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=CSSOq3khpJpNuh8KVAg7mEw0DZ4lRtXPS8LvpI1BMDnCHPP7LltvAmKjgs5wjncf&q=order_db HTTP/1.1" 200 29833
+[11/Jun/2018 15:40:41] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 147
+[11/Jun/2018 15:40:45] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 67
+[11/Jun/2018 15:40:50] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 155
+[11/Jun/2018 15:42:11] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[11/Jun/2018 15:47:12] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:52:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 15:57:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:02:13] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:07:12] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:07:30] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 16:07:30] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 16:07:37] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 16:12:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:17:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:22:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 16:27:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:14:33] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 17:14:37] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 17:14:40] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 147
+[11/Jun/2018 17:14:45] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 155
+[11/Jun/2018 17:14:46] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 671
+[11/Jun/2018 17:15:35] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[11/Jun/2018 17:15:37] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41627
+[11/Jun/2018 17:20:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:25:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:30:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:33:54] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 17:33:54] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 17:33:57] "GET /flyway/instance_add/ HTTP/1.1" 200 30635
+[11/Jun/2018 17:34:01] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[11/Jun/2018 17:35:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:40:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:45:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:50:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 17:55:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:00:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:05:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:10:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:15:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:20:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:25:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:30:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:35:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:40:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 18:45:38] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[11/Jun/2018 21:07:29] "GET / HTTP/1.1" 302 0
+[11/Jun/2018 21:07:29] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[11/Jun/2018 21:07:30] "GET /static/assets/js/init.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[11/Jun/2018 21:07:32] "GET /favicon.ico HTTP/1.1" 404 2540
+[11/Jun/2018 21:07:36] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[12/Jun/2018 17:25:20] "GET / HTTP/1.1" 302 0
+[12/Jun/2018 17:25:20] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[12/Jun/2018 17:25:20] "GET /static/assets/js/init.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[12/Jun/2018 17:25:21] "GET /favicon.ico HTTP/1.1" 404 2540
+[12/Jun/2018 17:25:23] "GET /flyway/instance_list/ HTTP/1.1" 200 114242
+[12/Jun/2018 17:25:26] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41625
+[12/Jun/2018 17:25:37] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[12/Jun/2018 17:25:43] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41625
+[12/Jun/2018 17:25:50] "GET /flyway/main_schema_info/?page=15 HTTP/1.1" 200 41873
+[12/Jun/2018 17:25:55] "GET /flyway/main_schema_info/?page=14 HTTP/1.1" 200 42122
+[12/Jun/2018 17:25:57] "GET /flyway/main_schema_info/?page=13 HTTP/1.1" 200 42375
+[12/Jun/2018 17:26:00] "GET /flyway/main_schema_info/?page=12 HTTP/1.1" 200 42492
+[12/Jun/2018 17:26:07] "GET /flyway/main_schema_info/?page=11 HTTP/1.1" 200 42502
+[12/Jun/2018 17:26:13] "GET /flyway/main_schema_info/?page=12 HTTP/1.1" 200 42554
+[12/Jun/2018 17:26:16] "GET /flyway/main_schema_info/?page=13 HTTP/1.1" 200 42391
+[12/Jun/2018 17:26:18] "GET /flyway/main_schema_info/?page=12 HTTP/1.1" 200 42520
+[12/Jun/2018 17:26:37] "GET /flyway/deal_change_env/1915/ HTTP/1.1" 200 29184
+[12/Jun/2018 17:32:02] "GET / HTTP/1.1" 302 0
+[12/Jun/2018 17:32:02] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[12/Jun/2018 17:32:05] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41613
+[12/Jun/2018 17:32:07] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=ucvaJ3i4oI3Te18QpUVRrxar9xfERYtoKsoRIIZoLC1IrzPdfF8fFfoKM0gPjSIO&q=+tob_invoice_center+ HTTP/1.1" 200 28501
+[12/Jun/2018 17:33:04] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41640
+[12/Jun/2018 17:33:20] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=E2a5brH7iAp3cZBGiX0s2Ew15z1krgpKUi3Ma6orFunSpxi38IdQgmKkI22vTaEa&q=tob_invoice_center HTTP/1.1" 200 28499
+[12/Jun/2018 17:34:24] "GET /flyway/search_schema_list/?csrfmiddlewaretoken=EiaaQ8GRtYrF8FA7gZrjsg8Kn8eaMCCGUy3RPNnbQSpuldhu6KEHGYm30BflewR6&q=yh_pay_ HTTP/1.1" 200 28472
+[12/Jun/2018 17:36:27] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41609
+[12/Jun/2018 17:36:29] "GET /flyway/main_schema_info/?page=16 HTTP/1.1" 200 35054
+[12/Jun/2018 17:36:32] "GET /flyway/main_schema_info/?page=15 HTTP/1.1" 200 41873
+[12/Jun/2018 17:36:33] "GET /flyway/main_schema_info/?page=14 HTTP/1.1" 200 42134
+[12/Jun/2018 17:36:36] "GET /flyway/main_schema_info/?page=13 HTTP/1.1" 200 42371
+[12/Jun/2018 17:36:38] "GET /flyway/main_schema_info/?page=12 HTTP/1.1" 200 42519
+[12/Jun/2018 17:36:47] "GET /flyway/main_schema_info/?page=11 HTTP/1.1" 200 42524
+[12/Jun/2018 17:36:51] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[12/Jun/2018 17:36:54] "GET /flyway/instance_list/ HTTP/1.1" 200 114242
+[12/Jun/2018 17:39:13] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41635
+[12/Jun/2018 17:39:14] "GET /flyway/main_schema_info/?page=16 HTTP/1.1" 200 35060
+[12/Jun/2018 17:39:17] "GET /flyway/main_schema_info/?page=15 HTTP/1.1" 200 41857
+[12/Jun/2018 17:39:19] "GET /flyway/main_schema_info/?page=14 HTTP/1.1" 200 42158
+[12/Jun/2018 17:39:21] "GET /flyway/main_schema_info/?page=13 HTTP/1.1" 200 42362
+[12/Jun/2018 17:39:23] "GET /flyway/main_schema_info/?page=12 HTTP/1.1" 200 42498
+[12/Jun/2018 17:39:25] "GET /flyway/main_schema_info/?page=11 HTTP/1.1" 200 42506
+[12/Jun/2018 17:39:27] "GET /flyway/main_schema_info/?page=10 HTTP/1.1" 200 42514
+[12/Jun/2018 17:39:29] "GET /flyway/main_schema_info/?page=9 HTTP/1.1" 200 42491
+[13/Jun/2018 14:10:56] "GET / HTTP/1.1" 302 0
+[13/Jun/2018 14:10:56] "GET /statistics/topology/ HTTP/1.1" 200 23770
+Not Found: /favicon.ico
+[13/Jun/2018 14:10:57] "GET /favicon.ico HTTP/1.1" 404 2540
+[13/Jun/2018 14:10:59] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[13/Jun/2018 14:11:05] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=jhKZbKOIwkYDQc0fcXMZFJL3w6fqwfBKzxDGapv2TeWs3KHC2IZnTrZm9zgBY9Qa&q=mms HTTP/1.1" 200 41005
+[13/Jun/2018 15:09:40] "GET / HTTP/1.1" 302 0
+[13/Jun/2018 15:09:41] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[13/Jun/2018 15:09:44] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 53089
+[13/Jun/2018 15:09:49] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=siiHGlhp1v3wEeEEoB1vXMbgomCzHiMzIyboF0YJop1lRMl1emeTbupz1PDK9c1Z&q=mms HTTP/1.1" 200 41005
+[13/Jun/2018 15:14:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:19:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:24:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:29:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:34:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:39:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:44:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:49:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:54:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 15:59:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:04:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:09:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:14:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:19:50] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:19:50] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41613
+[13/Jun/2018 16:19:54] "GET /flyway/deal_change_env/706/ HTTP/1.1" 200 29183
+[13/Jun/2018 16:24:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:29:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:34:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:39:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:44:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:49:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:54:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 16:59:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 18:29:02] "GET / HTTP/1.1" 302 0
+[13/Jun/2018 18:29:02] "GET /statistics/topology/ HTTP/1.1" 200 23770
+[13/Jun/2018 18:29:05] "GET /flyway/instance_list/ HTTP/1.1" 200 114242
+[13/Jun/2018 18:29:08] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[13/Jun/2018 18:29:18] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 125
+[13/Jun/2018 18:29:25] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 307
+[13/Jun/2018 18:29:35] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[13/Jun/2018 18:29:36] "GET /flyway/shard_schema_info HTTP/1.1" 301 0
+[13/Jun/2018 18:29:37] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52048
+[13/Jun/2018 18:33:39] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[13/Jun/2018 18:33:49] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 125
+[13/Jun/2018 18:33:52] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 307
+[13/Jun/2018 18:33:54] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[13/Jun/2018 18:33:56] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52032
+[13/Jun/2018 18:38:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 18:43:57] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 18:45:18] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[13/Jun/2018 18:45:28] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 125
+[13/Jun/2018 18:45:33] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 316
+[13/Jun/2018 18:45:41] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[13/Jun/2018 18:45:43] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52034
+[13/Jun/2018 18:45:45] "GET /flyway/schema_add/ HTTP/1.1" 200 32014
+[13/Jun/2018 18:45:55] "POST /flyway/env_name_by_ajax_and_is_shard/ HTTP/1.1" 200 125
+[13/Jun/2018 18:46:02] "POST /flyway/host_by_ajax_and_env_name/ HTTP/1.1" 200 208
+[13/Jun/2018 18:46:13] "POST /flyway/flyway_submit_step/ HTTP/1.1" 200 92
+[13/Jun/2018 18:46:15] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52034
+[13/Jun/2018 18:46:25] "GET /flyway/shard_shard_schema/?csrfmiddlewaretoken=Bjhaaxi7nP6eCXjHbW8CAddALBopU6G8RzaR9cZrKJ43Pv041Hl0OVrTo4pAm0Vy&q=paymen HTTP/1.1" 200 46844
+[13/Jun/2018 18:51:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 18:56:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:01:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:06:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:11:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:16:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:21:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:26:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:31:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:36:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:41:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:46:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:51:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 19:56:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 20:01:25] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2018 - 14:13:59
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[{'env': 'prelaunch'}, {'env': 'qa2'}, {'env': 'stage2'}, {'env': 'qa3'}, {'env': 'qa4'}, {'env': 't1'}, {'env': 't2'}]
+[{'env': 'prelaunch'}, {'env': 'qa2'}, {'env': 'stage2'}, {'env': 'qa3'}, {'env': 'qa4'}, {'env': 't1'}, {'env': 't2'}]
+qa2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'qa2'
+stage2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'stage2'
+t1 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 't1'
+prelaunch db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'prelaunch'
+qa2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'qa2'
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> ops_test qa2 db_main
+qa2 shard_16_01
+SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='qa2' GROUP BY remask
+[{'env': 'prelaunch'}, {'env': 'qa2'}, {'env': 'stage2'}, {'env': 'qa3'}, {'env': 'qa4'}, {'env': 't1'}, {'env': 't2'}]
+qa2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'qa2'
+stage2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'stage2'
+qa2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'qa2'
+qa2 db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'qa2'
+prelaunch db_main
+SELECT env_name as eenv,CONCAT(env_name,'::',ip,':',`port`) as instance_info from yhops_flyway_env
+            where env = 'prelaunch'
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> platform prelaunch db_main
+[{'env': 'prelaunch'}, {'env': 'qa2'}, {'env': 'stage2'}, {'env': 'qa3'}, {'env': 'qa4'}, {'env': 't1'}, {'env': 't2'}]
+[{'env': 'prelaunch'}, {'env': 'qa2'}, {'env': 'stage2'}, {'env': 'qa3'}, {'env': 'qa4'}, {'env': 't1'}, {'env': 't2'}]
+prelaunch shard_16_01
+SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='prelaunch' GROUP BY remask
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> payment_db pre_mysql56 shard_16_01
+prelaunch shard_16_03
+SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='prelaunch' GROUP BY remask
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> payment_db pre_mysql56 shard_16_03
+qa3 shard_16_03
+SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='qa3' GROUP BY remask
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> payment_db qa3_mysql56 shard_16_03
+qa2 shard_16_03
+SELECT remask as eenv,GROUP_CONCAT(remask,'::',ip,":",`port`) as instance_info from yhops_flyway_sharding_env
+                    where env_name ='qa2' GROUP BY remask
+<WSGIRequest: POST '/flyway/flyway_submit_step/'> payment_db qa2_mysql56 shard_16_03
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 13, 2018 - 23:00:16
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Jun/2018 23:03:42] "GET / HTTP/1.1" 302 0
+[13/Jun/2018 23:03:42] "GET /statistics/topology/ HTTP/1.1" 200 23781
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/fontello/css/fontello.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/nifty-modal/css/component.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:42] "GET /static/assets/libs/animate-css/animate.min.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/ios7-switch/ios7-switch.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/magnific-popup/magnific-popup.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/sortable/sortable-theme-bootstrap.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/pace/pace.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/all.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/bootstrap-datepicker/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/prettify/github.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/images/public/ops.bmp HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/css/style-responsive.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/minimal/_all.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/square/_all.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/line/_all.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/flat/_all.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/polaris/polaris.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-icheck/skins/futurico/futurico.css HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/images/users/user-35.jpg HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery/jquery-1.11.1.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/fontello/font/fontello.woff?66697216 HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:43] "GET /static/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/jquery-detectmobile/detect.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/jquery-blockui/jquery.blockUI.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/fastclick/fastclick.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/bootstrap-bootbox/bootbox.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/jquery-slimscroll/jquery.slimscroll.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/jquery-sparkline/jquery-sparkline.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/sortable/sortable.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/bootstrap-select/bootstrap-select.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/bootstrap-fileinput/bootstrap.file-input.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/bootstrap-select2/select2.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/magnific-popup/jquery.magnific-popup.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/pace/pace.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/bootstrap-datepicker/js/bootstrap-datetimepicker.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/libs/prettify/prettify.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/js/init.js HTTP/1.1" 304 0
+[13/Jun/2018 23:03:44] "GET /static/assets/js/echarts.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[13/Jun/2018 23:03:45] "GET /favicon.ico HTTP/1.1" 404 2540
+Internal Server Error: /sql_review/sqlquery/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/mysql_platform/sql_review/views.py", line 67, in sqlquery
+    return render(request, 'sqlquery.html', context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: sqlquery.html
+[13/Jun/2018 23:03:48] "GET /sql_review/sqlquery/ HTTP/1.1" 500 81524
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 13, 2018 - 23:00:24
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Internal Server Error: /sql_review/sqlquery/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base_query.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/mysql_platform/sql_review/views.py", line 67, in sqlquery
+    return render(request, 'sql_review/sqlquery.html', context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base_query.html
+[13/Jun/2018 23:05:37] "GET /sql_review/sqlquery/ HTTP/1.1" 500 127075
+[13/Jun/2018 23:06:30] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+[13/Jun/2018 23:06:30] "GET /static/user/css/user1.css HTTP/1.1" 404 1676
+[13/Jun/2018 23:06:30] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 404 1748
+[13/Jun/2018 23:06:30] "GET /static/dist/css/bootstrap-select.css HTTP/1.1" 404 1709
+[13/Jun/2018 23:06:30] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:30] "GET /static/bootstrap-table/css/bootstrap-table.min.css HTTP/1.1" 404 1751
+[13/Jun/2018 23:06:30] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 404 1763
+[13/Jun/2018 23:06:30] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 404 1745
+[13/Jun/2018 23:06:30] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:06:30] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 404 1703
+[13/Jun/2018 23:06:30] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:30] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:30] "GET /static/ace/ace.js HTTP/1.1" 404 1652
+[13/Jun/2018 23:06:30] "GET /static/ace/ext-language_tools.js HTTP/1.1" 404 1697
+[13/Jun/2018 23:06:30] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:30] "GET /static/ace/theme-github.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:30] "GET /static/ace/mode-sql.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:30] "GET /static/ace/snippets/sql.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:31] "GET /static/ace/ace_init.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:31] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 404 1766
+[13/Jun/2018 23:06:31] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 404 1733
+[13/Jun/2018 23:06:31] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 404 1706
+[13/Jun/2018 23:06:31] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:06:31] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 404 1703
+[13/Jun/2018 23:06:31] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 404 1745
+[13/Jun/2018 23:06:31] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 404 1763
+[13/Jun/2018 23:06:32] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:32] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:32] "GET /static/ace/ace.js HTTP/1.1" 404 1652
+[13/Jun/2018 23:06:33] "GET /static/ace/ext-language_tools.js HTTP/1.1" 404 1697
+[13/Jun/2018 23:06:33] "GET /static/ace/mode-sql.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:33] "GET /static/ace/theme-github.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:33] "GET /static/ace/snippets/sql.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:34] "GET /static/ace/ace_init.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:34] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 404 1766
+[13/Jun/2018 23:06:34] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 404 1733
+[13/Jun/2018 23:06:35] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 404 1706
+[13/Jun/2018 23:06:42] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+[13/Jun/2018 23:06:42] "GET /static/user/css/user1.css HTTP/1.1" 404 1676
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-table/css/bootstrap-table.min.css HTTP/1.1" 404 1751
+[13/Jun/2018 23:06:42] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 404 1748
+[13/Jun/2018 23:06:42] "GET /static/dist/css/bootstrap-select.css HTTP/1.1" 404 1709
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 404 1745
+[13/Jun/2018 23:06:42] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 404 1703
+[13/Jun/2018 23:06:42] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 404 1763
+[13/Jun/2018 23:06:42] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:42] "GET /static/ace/ace.js HTTP/1.1" 404 1652
+[13/Jun/2018 23:06:42] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:42] "GET /static/ace/ext-language_tools.js HTTP/1.1" 404 1697
+[13/Jun/2018 23:06:42] "GET /static/ace/snippets/sql.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:42] "GET /static/ace/theme-github.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:42] "GET /static/ace/mode-sql.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:42] "GET /static/ace/ace_init.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:42] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 404 1706
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 404 1733
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 404 1766
+[13/Jun/2018 23:06:42] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:06:43] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 404 1703
+[13/Jun/2018 23:06:43] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 404 1745
+[13/Jun/2018 23:06:43] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 404 1763
+[13/Jun/2018 23:06:44] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:44] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:06:44] "GET /static/ace/ace.js HTTP/1.1" 404 1652
+[13/Jun/2018 23:06:44] "GET /static/ace/ext-language_tools.js HTTP/1.1" 404 1697
+[13/Jun/2018 23:06:45] "GET /static/ace/mode-sql.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:45] "GET /static/ace/theme-github.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:45] "GET /static/ace/snippets/sql.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:06:46] "GET /static/ace/ace_init.js HTTP/1.1" 404 1667
+[13/Jun/2018 23:06:46] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 404 1766
+[13/Jun/2018 23:06:46] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 404 1733
+[13/Jun/2018 23:06:46] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 404 1706
+[13/Jun/2018 23:11:27] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+[13/Jun/2018 23:11:27] "GET /static/user/css/user1.css HTTP/1.1" 404 1676
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 404 1748
+[13/Jun/2018 23:11:27] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:11:27] "GET /static/dist/css/bootstrap-select.css HTTP/1.1" 200 6643
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-table/css/bootstrap-table.min.css HTTP/1.1" 200 5603
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 200 951
+[13/Jun/2018 23:11:27] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:11:27] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:11:27] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 200 59426
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 200 53581
+[13/Jun/2018 23:11:27] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:11:27] "GET /static/ace/theme-github.js HTTP/1.1" 200 2454
+[13/Jun/2018 23:11:27] "GET /static/ace/mode-sql.js HTTP/1.1" 200 8793
+[13/Jun/2018 23:11:27] "GET /static/ace/snippets/sql.js HTTP/1.1" 200 1036
+[13/Jun/2018 23:11:27] "GET /static/ace/ace_init.js HTTP/1.1" 200 6316
+[13/Jun/2018 23:11:27] "GET /static/ace/ext-language_tools.js HTTP/1.1" 200 68028
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 200 2580
+[13/Jun/2018 23:11:27] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 200 33916
+[13/Jun/2018 23:11:27] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 200 33699
+[13/Jun/2018 23:11:28] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:11:28] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:11:28] "GET /static/ace/ace.js HTTP/1.1" 200 701214
+[13/Jun/2018 23:11:28] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:12:17] "GET /statistics/topology/ HTTP/1.1" 200 23781
+[13/Jun/2018 23:12:20] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+[13/Jun/2018 23:12:20] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 404 1748
+[13/Jun/2018 23:12:20] "GET /static/user/css/user1.css HTTP/1.1" 404 1676
+[13/Jun/2018 23:12:20] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:12:20] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:12:20] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:12:20] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:12:21] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:12:21] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 404 1742
+[13/Jun/2018 23:12:21] "GET /static/user/js/ldapsync.js HTTP/1.1" 404 1679
+[13/Jun/2018 23:12:21] "GET /static/user/js/formatter.js HTTP/1.1" 404 1682
+[13/Jun/2018 23:16:07] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+[13/Jun/2018 23:16:07] "GET /static/user/css/user1.css HTTP/1.1" 200 897
+[13/Jun/2018 23:16:07] "GET /static/user/js/ldapsync.js HTTP/1.1" 200 473
+[13/Jun/2018 23:16:07] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 200 37045
+[13/Jun/2018 23:16:08] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 200 121200
+[13/Jun/2018 23:16:08] "GET /static/user/js/formatter.js HTTP/1.1" 200 3408
+[13/Jun/2018 23:16:08] "GET /static/jquery/jquery.min.js HTTP/1.1" 200 93100
+[13/Jun/2018 23:16:08] "GET /static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+Not Found: /querylog/
+[13/Jun/2018 23:16:08] "POST /querylog/ HTTP/1.1" 404 2535
+[13/Jun/2018 23:16:25] "GET /sql_review/sqlquery/ HTTP/1.1" 200 34206
+Not Found: /querylog/
+[13/Jun/2018 23:16:26] "POST /querylog/ HTTP/1.1" 404 2535
+Not Found: /getdbNameList/
+[13/Jun/2018 23:16:32] "POST /getdbNameList/ HTTP/1.1" 404 2550
+Not Found: /querylog/
+[13/Jun/2018 23:17:21] "POST /querylog/ HTTP/1.1" 404 2535
+Internal Server Error: /sql_review/sqlquery/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/mysql_platform/sql_review/views.py", line 67, in sqlquery
+    return render(request, 'sql_review/sqlquery.html', context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 292, in do_extends
+    raise TemplateSyntaxError("'%s' cannot appear more than once in the same template" % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'extends' cannot appear more than once in the same template
+[13/Jun/2018 23:18:22] "GET /sql_review/sqlquery/ HTTP/1.1" 500 134766
+[13/Jun/2018 23:18:45] "GET /sql_review/sqlquery/ HTTP/1.1" 200 52709
+[13/Jun/2018 23:23:49] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[13/Jun/2018 23:25:06] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53127
+[13/Jun/2018 23:25:12] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53127
+Not Found: /getdbNameList/
+[13/Jun/2018 23:25:20] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:25:42] "GET /flyway/instance_add/ HTTP/1.1" 200 31064
+[13/Jun/2018 23:25:43] "GET /static/assets/libs/jquery-notifyjs/styles/metro/notify-metro.css HTTP/1.1" 304 0
+[13/Jun/2018 23:25:46] "GET /flyway/main_schema_info/ HTTP/1.1" 200 42054
+[13/Jun/2018 23:25:49] "GET /flyway/shard_schema_info/ HTTP/1.1" 200 52463
+[13/Jun/2018 23:26:06] "GET /flyway/instance_list/ HTTP/1.1" 200 114671
+[13/Jun/2018 23:26:07] "GET /static/assets/libs/jquery-icheck/icheck.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:26:07] "GET /static/assets/libs/jquery-datatables/js/jquery.dataTables.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:26:07] "GET /static/assets/libs/jquery-datatables/js/dataTables.bootstrap.js HTTP/1.1" 304 0
+[13/Jun/2018 23:26:07] "GET /static/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js HTTP/1.1" 304 0
+[13/Jun/2018 23:26:07] "GET /static/assets/js/pages/datatables.js HTTP/1.1" 304 0
+[13/Jun/2018 23:26:10] "GET /flyway/main_schema_info/ HTTP/1.1" 200 42038
+[13/Jun/2018 23:28:52] "GET /flyway/schema_add/ HTTP/1.1" 200 32025
+[13/Jun/2018 23:28:54] "GET /flyway/main_schema_info/ HTTP/1.1" 200 41648
+[13/Jun/2018 23:28:59] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53730
+Not Found: /querylog/
+[13/Jun/2018 23:28:59] "POST /querylog/ HTTP/1.1" 404 2535
+Not Found: /getdbNameList/
+[13/Jun/2018 23:28:59] "POST /getdbNameList/ HTTP/1.1" 404 2550
+Not Found: /querylog/
+[13/Jun/2018 23:29:09] "POST /querylog/ HTTP/1.1" 404 2535
+[13/Jun/2018 23:34:06] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+Internal Server Error: /sql_review/sqlquery/
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base_query.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/data/mysql_platform/sql_review/views.py", line 67, in sqlquery
+    return render(request, 'sql_review/sqlquery.html', context)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base_query.html
+[13/Jun/2018 23:37:00] "GET /sql_review/sqlquery/ HTTP/1.1" 500 127214
+[13/Jun/2018 23:37:26] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53302
+Not Found: /getdbNameList/
+[13/Jun/2018 23:37:27] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:38:44] "GET /sql_review/sqlquery/ HTTP/1.1" 200 47953
+[13/Jun/2018 23:40:19] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53302
+Not Found: /getdbNameList/
+[13/Jun/2018 23:40:19] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:42:51] "GET /sql_review/sqlquery/ HTTP/1.1" 200 51698
+Not Found: /getdbNameList/
+[13/Jun/2018 23:42:51] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:45:30] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53302
+Not Found: /getdbNameList/
+[13/Jun/2018 23:45:31] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:46:57] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53730
+Not Found: /querylog/
+[13/Jun/2018 23:46:58] "POST /querylog/ HTTP/1.1" 404 2535
+Not Found: /getdbNameList/
+[13/Jun/2018 23:46:58] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:52:03] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 13, 2018 - 23:05:30
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 13, 2018 - 23:53:50
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Jun/2018 23:56:10] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53730
+Not Found: /querylog/
+[13/Jun/2018 23:56:10] "POST /querylog/ HTTP/1.1" 404 2535
+Not Found: /getdbNameList/
+[13/Jun/2018 23:56:10] "POST /getdbNameList/ HTTP/1.1" 404 2550
+[13/Jun/2018 23:56:33] "GET /static/dist/css/bootstrap-select.css.map HTTP/1.1" 200 14475
+[13/Jun/2018 23:56:34] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+Not Found: /getdbNameList/
+[13/Jun/2018 23:57:20] "GET /getdbNameList/ HTTP/1.1" 404 2549
+Not Found: /getdbNameList/
+[14/Jun/2018 00:00:07] "GET /getdbNameList/ HTTP/1.1" 404 2549
+[14/Jun/2018 00:01:14] "GET /users/new_message_by_ajax/ HTTP/1.1" 200 2
+[14/Jun/2018 00:01:22] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53741
+Not Found: /querylog/
+[14/Jun/2018 00:01:23] "POST /querylog/ HTTP/1.1" 404 2535
+Forbidden (CSRF token missing or incorrect.): /sql_review/getdbNameList/
+[14/Jun/2018 00:01:23] "POST /sql_review/getdbNameList/ HTTP/1.1" 403 2513
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 13, 2018 - 23:55:35
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[14/Jun/2018 00:03:15] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53741
+Not Found: /querylog/
+[14/Jun/2018 00:03:16] "POST /querylog/ HTTP/1.1" 404 2535
+Forbidden (CSRF token missing or incorrect.): /sql_review/getdbNameList/
+[14/Jun/2018 00:03:16] "POST /sql_review/getdbNameList/ HTTP/1.1" 403 2513
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 14, 2018 - 00:02:36
+Django version 2.0.1, using settings 'mysql_platform.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x2b8c3399fd90>
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 364, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 351, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/registry.py", line 73, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/mysql_platform/urls.py", line 23, in <module>
+    url(r'^sql_review/', include('sql_review.urls')),
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/sql_review/urls.py", line 17, in <module>
+    from sql_review.views import review, step, submit_step, instance_by_ajax_and_id, submitted_list, modify_submitted_sql
+  File "/data/mysql_platform/sql_review/views.py", line 69, in <module>
+    @csrf_exempt
+NameError: name 'csrf_exempt' is not defined
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x2b5aae484d90>
+Traceback (most recent call last):
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 364, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/management/base.py", line 351, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/registry.py", line 73, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/mysql_platform/urls.py", line 23, in <module>
+    url(r'^sql_review/', include('sql_review.urls')),
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/virtualenv/python3_inception/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/data/mysql_platform/sql_review/urls.py", line 17, in <module>
+    from sql_review.views import review, step, submit_step, instance_by_ajax_and_id, submitted_list, modify_submitted_sql
+  File "/data/mysql_platform/sql_review/views.py", line 69, in <module>
+    @csrf_exempt
+NameError: name 'csrf_exempt' is not defined
+Performing system checks...
+
+[14/Jun/2018 00:50:31] "GET / HTTP/1.1" 302 0
+[14/Jun/2018 00:50:32] "GET /statistics/topology/ HTTP/1.1" 200 23781
+[14/Jun/2018 00:50:42] "GET /flyway/schema_add/ HTTP/1.1" 200 32025
+[14/Jun/2018 00:50:49] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53741
+Not Found: /querylog/
+[14/Jun/2018 00:50:49] "POST /querylog/ HTTP/1.1" 404 2535
+[14/Jun/2018 00:50:50] "POST /sql_review/getdbNameList/ HTTP/1.1" 200 50
+[19/Jun/2018 13:37:13] "GET / HTTP/1.1" 302 0
+[19/Jun/2018 13:37:14] "GET /statistics/topology/ HTTP/1.1" 200 23781
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/fontello/css/fontello.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/animate-css/animate.min.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/nifty-modal/css/component.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/magnific-popup/magnific-popup.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/ios7-switch/ios7-switch.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/pace/pace.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/sortable/sortable-theme-bootstrap.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/bootstrap-datepicker/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/all.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/prettify/github.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/css/style-responsive.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/images/users/user-35.jpg HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/minimal/_all.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/square/_all.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/flat/_all.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/polaris/polaris.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/line/_all.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-icheck/skins/futurico/futurico.css HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/images/public/ops.bmp HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/fontello/font/fontello.woff?66697216 HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/bootstrap/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery/jquery-1.11.1.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:14] "GET /static/assets/libs/jquery-detectmobile/detect.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/fastclick/fastclick.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/jquery-blockui/jquery.blockUI.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/bootstrap-bootbox/bootbox.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/jquery-slimscroll/jquery.slimscroll.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/jquery-sparkline/jquery-sparkline.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/sortable/sortable.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/bootstrap-fileinput/bootstrap.file-input.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/bootstrap-select/bootstrap-select.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/bootstrap-select2/select2.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/pace/pace.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/magnific-popup/jquery.magnific-popup.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/prettify/prettify.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/libs/bootstrap-datepicker/js/bootstrap-datetimepicker.min.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/js/init.js HTTP/1.1" 304 0
+[19/Jun/2018 13:37:15] "GET /static/assets/js/echarts.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[19/Jun/2018 13:37:15] "GET /favicon.ico HTTP/1.1" 404 2540
+[19/Jun/2018 13:37:18] "GET /sql_review/sqlquery/ HTTP/1.1" 200 53741
+[19/Jun/2018 13:37:18] "GET /static/bootstrap-table/css/bootstrap-table.min.css HTTP/1.1" 200 5603
+[19/Jun/2018 13:37:18] "GET /static/dist/css/bootstrap-select.css HTTP/1.1" 200 6643
+[19/Jun/2018 13:37:18] "GET /static/user/css/user1.css HTTP/1.1" 200 897
+[19/Jun/2018 13:37:18] "GET /static/bootstrap-3.3.7-dist/css/bootstrap.min.css HTTP/1.1" 200 121200
+[19/Jun/2018 13:37:18] "GET /static/jquery/jquery.min.js HTTP/1.1" 200 93100
+[19/Jun/2018 13:37:18] "GET /static/bootstrap-3.3.7-dist/js/bootstrap.min.js HTTP/1.1" 200 37045
+[19/Jun/2018 13:37:18] "GET /static/bootstrap-table/js/bootstrap-table-zh-CN.min.js HTTP/1.1" 200 951
+[19/Jun/2018 13:37:18] "GET /static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[19/Jun/2018 13:37:19] "GET /static/bootstrap-table/js/bootstrap-table.min.js HTTP/1.1" 200 53581
+[19/Jun/2018 13:37:19] "GET /static/dist/js/bootstrap-select.js HTTP/1.1" 200 59426
+[19/Jun/2018 13:37:19] "GET /static/user/js/ldapsync.js HTTP/1.1" 200 473
+[19/Jun/2018 13:37:19] "GET /static/user/js/formatter.js HTTP/1.1" 200 3408
+[19/Jun/2018 13:37:19] "GET /static/ace/mode-sql.js HTTP/1.1" 200 8793
+[19/Jun/2018 13:37:19] "GET /static/ace/theme-github.js HTTP/1.1" 200 2454
+[19/Jun/2018 13:37:19] "GET /static/ace/ace_init.js HTTP/1.1" 200 6316
+[19/Jun/2018 13:37:19] "GET /static/ace/snippets/sql.js HTTP/1.1" 200 1036
+[19/Jun/2018 13:37:19] "GET /static/ace/ext-language_tools.js HTTP/1.1" 200 68028
+[19/Jun/2018 13:37:19] "GET /static/bootstrap-table/js/tableExport.min.js HTTP/1.1" 200 33916
+[19/Jun/2018 13:37:19] "GET /static/bootstrap-table/js/bootstrap-table-export.min.js HTTP/1.1" 200 2580
+[19/Jun/2018 13:37:19] "GET /static/dist/js/sql-formatter.min.js HTTP/1.1" 200 33699
+[19/Jun/2018 13:37:19] "GET /static/ace/ace.js HTTP/1.1" 200 701214
+Not Found: /querylog/
+[19/Jun/2018 13:37:20] "POST /querylog/ HTTP/1.1" 404 2535
