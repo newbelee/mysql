@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from .query import sqlquery, getTableNameList, sqlquery_and_return, querylog, \
-	getdbNameList, query
+	getdbNameList, query, explain
 from .sqlad import sqladvisor, sqladvisorcheck
 
 urlpatterns = [
     url(r'^sqlquery/', sqlquery, name='sqlquery'),
     url(r'^getTableNameList/$', getTableNameList, name='getTableNameList'),
     url(r'^sqlquery_and_return/$', sqlquery_and_return, name='sqlquery_get_result'),
-	url(r'querylog/$', querylog, name='querylog'),
-	url(r'getdbNameList/$', getdbNameList, name='getdbNameList'),
+    url(r'querylog/$', querylog, name='querylog'),
+    url(r'getdbNameList/$', getdbNameList, name='getdbNameList'),
     url(r'query/$', query, name='query'),
+    url(r'explain/$', explain, name='explain'),
     url(r'sqladvisor/$', sqladvisor, name='sqladvisor'),
     url(r'^sqladvisorcheck/$', sqladvisorcheck, name='sqladvisorcheck'),
 ]

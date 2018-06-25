@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from django.http.response import HttpResponse, HttpResponseRedirect
 import json
+import subprocess
 
 s = SQL()
 # 获取读用户
@@ -67,16 +68,22 @@ def sqladvisorcheck(request):
     if slave_info:
         slave_host = slave_info[0][0]
         slave_port = slave_info[0][1]
+    else:
+        finalResult['status'] = 1
+        finalResult['msg'] = '没有找到该db对应的连接串，请联系DBA！'
+        return HttpResponse(json.dumps(finalResult), content_type='application/json')
+
 
     # 提交给sqladvisor获取审核结果
     sqladvisor_path = getattr(settings, 'SQLADVISOR')
+    print(sqladvisor_path,'aaaaaaaaaaaaaaaaaaaaaaaaaaa')
     sqlContent = sqlContent.rstrip().replace('"', '\\"').replace('`', '\`').replace('\n', ' ')
-    try:
-        p = subprocess.Popen(sqladvisor_path + ' -h "%s" -P "%s" -u "%s" -p "%s\" -d "%s" -v %s -q "%s"' % (
-            slave_host, slave_port, review_user, review_password, str(dbName), verbose, sqlContent),
-                             stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True, universal_newlines=True)
-        stdout, stderr = p.communicate()
-        finalResult['data'] = stdout
-    except Exception:
-        finalResult['data'] = 'sqladvisor运行报错，请联系管理员'
+    # try:
+    p = subprocess.Popen(sqladvisor_path + ' -h "%s" -P "%s" -u "%s" -p "%s\" -d "%s" -v %s -q "%s"' % (
+        slave_host, slave_port, review_user, review_password, str(dbName), verbose, sqlContent),
+                         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True, universal_newlines=True)
+    stdout, stderr = p.communicate()
+    finalResult['data'] = stdout
+    # except Exception:
+        # finalResult['data'] = 'sqladvisor运行报错，请联系管理员'
     return HttpResponse(json.dumps(finalResult), content_type='application/json')

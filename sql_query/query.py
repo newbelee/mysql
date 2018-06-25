@@ -224,6 +224,60 @@ def query(request):
                         content_type='application/json')
 
 
+# 获取SQL执行计划
+@csrf_exempt
+def explain(request):
+    if request.is_ajax():
+        sqlContent = request.POST.get('sql_content')
+       # clusterName = request.POST.get('cluster_name')
+        dbName = request.POST.get('db_name')
+    else:
+        sqlContent = request.POST['sql_content']
+       # clusterName = request.POST['cluster_name']
+        dbName = request.POST.get('db_name')
+    finalResult = {'status': 0, 'msg': 'ok', 'data': []}
+
+    # 服务器端参数验证
+    if sqlContent is None or dbName is None:
+        finalResult['status'] = 1
+        finalResult['msg'] = '页面提交参数可能为空'
+        return HttpResponse(json.dumps(finalResult), content_type='application/json')
+
+    sqlContent = sqlContent.rstrip()
+    if sqlContent[-1] != ";":
+        finalResult['status'] = 1
+        finalResult['msg'] = 'SQL语句结尾没有以;结尾，请重新修改并提交！'
+        return HttpResponse(json.dumps(finalResult), content_type='application/json')
+
+    # 过滤非查询的语句
+    if re.match(r"^explain", sqlContent.lower()):
+        pass
+    else:
+        finalResult['status'] = 1
+        finalResult['msg'] = '仅支持explain开头的语句，请检查'
+        return HttpResponse(json.dumps(finalResult), content_type='application/json')
+
+    # 取出该集群的连接方式,按照分号截取第一条有效sql执行
+    #masterInfo = master_config.objects.get(cluster_name=clusterName)
+    slave_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
+    if slave_info:
+        slave_host = slave_info[0][0]
+        slave_port = slave_info[0][1]
+    else:
+        finalResult['status'] = 1
+        finalResult['msg'] = '没有找到该db对应的连接串，请联系DBA！'
+        return HttpResponse(json.dumps(finalResult), content_type='application/json')
+    sqlContent = sqlContent.strip().split(';')[0]
+
+    # 执行获取执行计划语句
+    sql_result = mysql_query(slave_host, slave_port, str(dbName), sqlContent)
+
+    finalResult['data'] = sql_result
+
+    # 返回查询结果
+    return HttpResponse(json.dumps(finalResult, cls=ExtendJSONEncoder, bigint_as_string=True),
+                        content_type='application/json')
+
 
 def mysql_query(Host, Port, dbName, sql, limit_num=0):
         result = {}
