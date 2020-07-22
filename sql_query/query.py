@@ -69,15 +69,15 @@ def sqlquery(request):
 def getTableNameList(request):
     clusterName = request.POST.get('cluster_name')
     db_name = request.POST.get('db_name', 'xxxxxx')
-    is_master = request.POST.get('is_master')
+    is_main = request.POST.get('is_main')
     result = {'status': 0, 'msg': 'ok', 'data': []}
     sql_table = "select table_name  from information_schema.tables where table_schema='{0}'".format(db_name)
-    slave_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(db_name))
-    if slave_info:
-        slave_host = slave_info[0][0]
-        slave_port = slave_info[0][1]
-        ss = SQL(slave_host, slave_port)
-        with get_mysql_conn(slave_host, slave_port) as conn:
+    subordinate_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(db_name))
+    if subordinate_info:
+        subordinate_host = subordinate_info[0][0]
+        subordinate_port = subordinate_info[0][1]
+        ss = SQL(subordinate_host, subordinate_port)
+        with get_mysql_conn(subordinate_host, subordinate_port) as conn:
             with conn as cur:
                 cur.execute(sql_table)
                 tables = cur.fetchall()
@@ -133,13 +133,13 @@ def query(request):
             return HttpResponse(json.dumps(finalResult), content_type='application/json')
 
     # 取出该集群的连接方式,查询只读账号,按照分号截取第一条有效sql执行
-    # slave_info = slave_config.objects.get(cluster_name=cluster_name)
-    slave_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
-    if not slave_info:
+    # subordinate_info = subordinate_config.objects.get(cluster_name=cluster_name)
+    subordinate_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
+    if not subordinate_info:
         msgg = "没有找到对应的db链接信息"
         return HttpResponse(json.dumps({"status":1, "msg": msgg}), content_type='application/json')
-    slave_host = slave_info[0][0]
-    slave_port = slave_info[0][1]
+    subordinate_host = subordinate_info[0][0]
+    subordinate_port = subordinate_info[0][1]
     sqlContent = sqlContent.strip().split(';')[0]
 
     # # 查询权限校验，以及limit_num获取
@@ -163,7 +163,7 @@ def query(request):
 
     # 执行查询语句,统计执行时间
     t_start = time.time()
-    sql_result = mysql_query(slave_host, slave_port, str(dbName), sqlContent, limit_num)
+    sql_result = mysql_query(subordinate_host, subordinate_port, str(dbName), sqlContent, limit_num)
     t_end = time.time()
     cost_time = "%5s" % "{:.4f}".format(t_end - t_start)
 
@@ -258,11 +258,11 @@ def explain(request):
         return HttpResponse(json.dumps(finalResult), content_type='application/json')
 
     # 取出该集群的连接方式,按照分号截取第一条有效sql执行
-    #masterInfo = master_config.objects.get(cluster_name=clusterName)
-    slave_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
-    if slave_info:
-        slave_host = slave_info[0][0]
-        slave_port = slave_info[0][1]
+    #mainInfo = main_config.objects.get(cluster_name=clusterName)
+    subordinate_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
+    if subordinate_info:
+        subordinate_host = subordinate_info[0][0]
+        subordinate_port = subordinate_info[0][1]
     else:
         finalResult['status'] = 1
         finalResult['msg'] = '没有找到该db对应的连接串，请联系DBA！'
@@ -270,7 +270,7 @@ def explain(request):
     sqlContent = sqlContent.strip().split(';')[0]
 
     # 执行获取执行计划语句
-    sql_result = mysql_query(slave_host, slave_port, str(dbName), sqlContent)
+    sql_result = mysql_query(subordinate_host, subordinate_port, str(dbName), sqlContent)
 
     finalResult['data'] = sql_result
 
@@ -371,7 +371,7 @@ def querylog(request):
 @csrf_exempt
 def getdbNameList(request):
     clusterName = request.POST.get('cluster_name', "abcxxx")
-    is_master = request.POST.get('is_master')
+    is_main = request.POST.get('is_main')
     result = {'status': 0, 'msg': 'ok', 'data': []}
     sql = "select dbname from sqltools_user_db"
     db_names = s.execute_and_fetchall(sql)
@@ -379,9 +379,9 @@ def getdbNameList(request):
     result = {'status': 0, 'msg': 'ok', 'data': db_list}
     print(result)
     return HttpResponse(json.dumps(result), content_type='application/json')
-    # if is_master:
+    # if is_main:
     #     try:
-    #         master_info = master_config.objects.get(cluster_name=clusterName)
+    #         main_info = main_config.objects.get(cluster_name=clusterName)
     #     except Exception:
     #         result['status'] = 1
     #         result['msg'] = '找不到对应的主库配置信息，请配置'
@@ -389,8 +389,8 @@ def getdbNameList(request):
 
     #     try:
     #         # 取出该集群主库的连接方式，为了后面连进去获取所有databases
-    #         listDb = dao.getAlldbByCluster(master_info.master_host, master_info.master_port, master_info.master_user,
-    #                                        prpCryptor.decrypt(master_info.master_password))
+    #         listDb = dao.getAlldbByCluster(main_info.main_host, main_info.main_port, main_info.main_user,
+    #                                        prpCryptor.decrypt(main_info.main_password))
     #         # 要把result转成JSON存进数据库里，方便SQL单子详细信息展示
     #         result['data'] = listDb
     #     except Exception as msg:
@@ -399,7 +399,7 @@ def getdbNameList(request):
 
     # else:
     #     try:
-    #         slave_info = slave_config.objects.get(cluster_name=clusterName)
+    #         subordinate_info = subordinate_config.objects.get(cluster_name=clusterName)
     #     except Exception:
     #         result['status'] = 1
     #         result['msg'] = '找不到对应的从库配置信息，请配置'
@@ -407,8 +407,8 @@ def getdbNameList(request):
 
     #     try:
     #         # 取出该集群的连接方式，为了后面连进去获取所有databases
-    #         listDb = dao.getAlldbByCluster(slave_info.slave_host, slave_info.slave_port, slave_info.slave_user,
-    #                                        prpCryptor.decrypt(slave_info.slave_password))
+    #         listDb = dao.getAlldbByCluster(subordinate_info.subordinate_host, subordinate_info.subordinate_port, subordinate_info.subordinate_user,
+    #                                        prpCryptor.decrypt(subordinate_info.subordinate_password))
     #         # 要把result转成JSON存进数据库里，方便SQL单子详细信息展示
     #         result['data'] = listDb
     #     except Exception as msg:
