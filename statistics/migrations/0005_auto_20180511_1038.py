@@ -22,10 +22,10 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='instancerelation',
-            name='master_instance',
+            name='main_instance',
         ),
         migrations.RemoveField(
             model_name='instancerelation',
-            name='slave_instance',
+            name='subordinate_instance',
         ),
     ]

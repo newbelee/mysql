@@ -16,10 +16,10 @@ review_user, review_password = en.get_ro_user_pass()
 # SQL优化工具
 def sqladvisor(request):
     # 获取所有集群主库名称
-    # masters = master_config.objects.all().order_by('cluster_name')
-    # if len(masters) == 0:
-    #     return HttpResponseRedirect('/admin/sql/master_config/add/')
-    # cluster_name_list = [master.cluster_name for master in masters]
+    # mains = main_config.objects.all().order_by('cluster_name')
+    # if len(mains) == 0:
+    #     return HttpResponseRedirect('/admin/sql/main_config/add/')
+    # cluster_name_list = [main.cluster_name for main in mains]
     data = {}
     sql = "select dbid, dbname from sqltools_user_db"
     dbs = s.execute_and_return_dict(sql)
@@ -63,11 +63,11 @@ def sqladvisorcheck(request):
         verbose = 1
 
     # 取出主库的连接信息
-    # cluster_info = master_config.objects.get(cluster_name=clusterName)
-    slave_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
-    if slave_info:
-        slave_host = slave_info[0][0]
-        slave_port = slave_info[0][1]
+    # cluster_info = main_config.objects.get(cluster_name=clusterName)
+    subordinate_info = s.execute_and_fetchall("select host,port from sqltools_db_conninfo where type='R' and dbname='{0}'".format(dbName))
+    if subordinate_info:
+        subordinate_host = subordinate_info[0][0]
+        subordinate_port = subordinate_info[0][1]
     else:
         finalResult['status'] = 1
         finalResult['msg'] = '没有找到该db对应的连接串，请联系DBA！'
@@ -80,7 +80,7 @@ def sqladvisorcheck(request):
     sqlContent = sqlContent.rstrip().replace('"', '\\"').replace('`', '\`').replace('\n', ' ')
     # try:
     p = subprocess.Popen(sqladvisor_path + ' -h "%s" -P "%s" -u "%s" -p "%s\" -d "%s" -v %s -q "%s"' % (
-        slave_host, slave_port, review_user, review_password, str(dbName), verbose, sqlContent),
+        subordinate_host, subordinate_port, review_user, review_password, str(dbName), verbose, sqlContent),
                          stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True, universal_newlines=True)
     stdout, stderr = p.communicate()
     finalResult['data'] = stdout
